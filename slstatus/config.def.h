@@ -1,3 +1,4 @@
+
 /* See LICENSE file for copyright and license details. */
 
 /* interval between updates (in ms) */
@@ -66,8 +67,4 @@ static const char unknown_str[] = "n/a";
 static const struct arg args[] = {
 	/* function format          argument */
 	{ datetime, "%s",           "%F %T" },
-	{ cpu_perc, ": %s%%  |", "NULL" },
-	{ ram_perc, "RAM: %s%%  |", "NULL" },
-	{ netspeed_rx, "%sB/s",     "enp1s0" },
-	{ netspeed_tx, "%sB/s",     "enp1s0" },
 };
