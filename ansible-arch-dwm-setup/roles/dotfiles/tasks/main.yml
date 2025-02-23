@@ -33,7 +33,7 @@
   command: "stow {{ item }}"
   args:
     chdir: "{{ dotfiles.destination }}"
-  loop: "{{ dotfiles.package }}"
+  loop: "{{ dotfiles.packages }}"
   become: yes
   become_user: "{{ username }}"
 
