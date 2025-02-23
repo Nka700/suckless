@@ -87,6 +87,7 @@
       - gsimplecal
       - jq
       - lshw
+      - icu
       - mpv
       - noto-fonts-cjk
       - noto-fonts-cjk
