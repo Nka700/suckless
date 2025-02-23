@@ -1,0 +1,42 @@
+
+- name: Check if yay is installed
+  command: "which yay"
+  register: yay_check
+  ignore_errors: yes
+  changed_when: no
+
+- name: Install yay for users_1
+  become: yes
+  become_user: '{{ username }}'
+  git:
+    repo: "{{ yay.git_url }}"
+    dest: "{{ yay.build_dir }}"
+  when: yay_check.rc != 0
+
+- name: Install yay for users_2
+  become: yes
+  become_user: '{{ username }}'
+  command: "{{ yay.install_shell }}"
+  args:
+    chdir: "{{ yay.build_dir }}"
+  when: yay_check.rc != 0
+
+- name: Find yay package
+  become: yes
+  become_user: '{{ username }}'
+  find:
+    paths: "/home/{{ username }}/yay"
+    patterns: "yay-[0-9]*.pkg.tar.zst"
+  register: yay_package
+
+- name: Debug found package
+  debug:
+    var: yay_package.files
+
+- name: Install yay for users_3
+  become: yes
+  command: sudo pacman -U --noconfirm "{{ yay_package.files[0].path }}"
+  args:
+    chdir: "{{ yay.build_dir }}"
+  when: yay_package.matched > 0
+

@@ -1,0 +1,39 @@
+---
+- name: Clone user dotfiles
+  git: 
+    repo: "{{ dotfiles.url }}"
+    dest: "{{ dotfiles.destination }}"
+    version: "{{ dotfiles.version }}"
+    update: no
+  become: yes
+  become_user: "{{ username }}"
+
+- name: Ensure stow is installed
+  package:
+    name: stow
+    state: present
+  become: yes
+
+- name: Create required directories for dotfiles
+  file:
+    path: "{{ item }}"
+    state: directory
+    mode: '0755'
+  loop:
+    - ~/.config/conky/
+    - ~/.config/xfce4/xfconf/xfce-perchannel-xml/
+    - ~/.config/fcitx/
+    - ~/.config/fcitx5/
+    - ~/.config/snownews/
+    - ~/.vnc/
+  become: yes
+  become_user: "{{ username }}"
+
+- name: Stow dotfiles packages
+  command: "stow {{ item }}"
+  args:
+    chdir: "{{ dotfiles.destination }}"
+  loop: "{{ dotfiles.package }}"
+  become: yes
+  become_user: "{{ username }}"
+

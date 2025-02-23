@@ -1,0 +1,50 @@
+
+- name: Ensure necessary packages are installed
+  pacman:
+    name: 
+      - base-devel   # gcc, make, etc.
+      - libx11
+      - libxft
+      - libxinerama
+      - lightdm
+      - lightdm-gtk-greeter
+      - lightdm-gtk-greeter-settings
+      - openbox
+      - xfce4-settings
+      - lxappearance-gtk3
+    state: present
+  become: yes
+
+- name: Clone suckless repository
+  git:
+    repo: "{{ suckless.url }}"
+    dest: "{{ suckless.destination }}"
+    version: "{{ suckless.version }}"
+    update: yes
+  become: yes
+
+- name: build suckless software
+  command: make clean install
+  args:
+    chdir: "{{ item }}"
+  loop:
+    - "{{ suckless.dmenu_destination }}"
+    - "{{ suckless.dwm_destination }}"
+    - "{{ suckless.st_destination }}"
+    - "{{ suckless.slstatus_destination }}"
+  become: yes
+
+- name: Deploy dwm.desktop using template
+  template:
+    src: dwm.desktop.j2
+    dest: /usr/share/xsessions/dwm.desktop
+    mode: '0644'
+
+- name: enable lightdm
+  systemd:
+    name: lightdm.service
+    daemon_reload: yes
+    enabled: yes
+  become: yes
+
+

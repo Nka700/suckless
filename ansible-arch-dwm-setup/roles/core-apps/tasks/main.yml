@@ -1,0 +1,137 @@
+- name: install basic utils, shells, apps
+  community.general.pacman:
+   name:
+    - archlinux-keyring
+    - acpi
+#    - acpilight
+    - bind
+    - cronie
+    - inetutils
+    - strace
+    - sysstat
+    - jgmenu
+    - base-devel
+    - htop
+    - kitty
+    - libva
+    - libva-intel-driver
+    - libva-utils
+    - network-manager-applet
+    - networkmanager
+    - networkmanager-openvpn
+    - openssh
+    - picom
+    - parted
+    - python-setuptools
+    - powertop
+    - source-highlight
+    - tint2
+    - tree
+    - tlp
+    - vi
+    - wpa_supplicant
+    - xfce4-power-manager
+    - xorg-xinput
+    - xorg-xwininfo
+    - xorg-xdpyinfo
+    - x11-ssh-askpass
+    - man-db
+   state: latest
+   update_cache: yes
+
+- name: Install archival utils
+  pacman:
+    name:
+#      - atool
+      - p7zip
+      - unrar
+      - unzip
+      - xz
+      - zip
+      - bzip2
+      - gzip
+      - tar
+    state: present
+
+- name: Install download utils
+  pacman:
+    name:
+#      - aria2
+      - curl
+      - wget
+      - flatpak
+      - python-pip
+    state: present
+
+- name: Install extra packages
+  pacman:
+    name:
+      - arch-audit-gtk
+      - bashtop
+      - bat
+      - blueman
+      - bluez
+      - conky
+      - docker
+      - docker-compose
+      - evince
+      - fcitx5
+      - fcitx5-configtool
+      - fcitx5-gtk
+      - fcitx5-mozc
+      - fcitx5-qt
+      - gimp
+      - git
+      - go
+      - gsimplecal
+      - gsimplecal
+      - jq
+      - lshw
+      - mpv
+      - noto-fonts-cjk
+      - noto-fonts-cjk
+      - noto-fonts-emoji
+      - noto-fonts-emoji
+      - nvidia
+      - nvidia-settings
+      - nvidia-utils
+      - pamixer
+      - pavucontrol
+      - playerctl
+      - pulseaudio
+      - pulseaudio-bluetooth
+      - redshift
+      - rofi
+      - slock
+      - stow
+      - vlc
+      - whois
+      - wireguard-tools
+      - xf86-video-nouveau
+      - gvim
+      - python-pynvim
+#      - nvidia-dkms
+    state: present
+
+#due to `× This environment is externally managed` error, fixed to use pacman for installing packages."
+#- name: Install python packages
+#  pip:
+#    name:
+#      - pynvim
+#    state: present
+
+- name: enable sshd
+  systemd:
+    name: sshd.service
+    state: started
+    daemon_reload: yes
+    enabled: yes
+  become: yes
+
+- name: enable docker
+  systemd:
+    name: docker.service
+    daemon_reload: yes
+    enabled: yes
+  become: yes
+

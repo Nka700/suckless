@@ -1,0 +1,6 @@
+
+- name: install firefox
+  community.general.pacman:
+   name: 
+    - firefox
+   state: present 

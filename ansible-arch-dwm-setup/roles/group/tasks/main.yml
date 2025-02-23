@@ -1,0 +1,11 @@
+---
+
+- name: "add user docker"
+  user:
+    name: "{{ username }}"
+    groups:
+      - docker
+      - users
+      - wheel
+    append: yes
+  become: yes

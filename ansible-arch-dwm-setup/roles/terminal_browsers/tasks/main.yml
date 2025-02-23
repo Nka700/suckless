@@ -1,0 +1,39 @@
+
+- name: install term browsers
+  community.general.pacman:
+   name:
+    - terminator
+    - kitty
+   state: present
+
+- name: Create required directories for term dotfiles
+  file:
+    path: "{{ item }}"
+    state: directory
+    mode: '0755'
+  become: yes
+  become_user: "{{ username }}"
+  loop:
+    - ~/.config/kitty/
+
+- name: Create required directories for dotfiles
+  file:
+    path: "{{ item }}"
+    state: directory
+    mode: '0755'
+  loop:
+    - ~/.config/kitty/
+  become: yes
+  become_user: "{{ username }}"
+
+#- name: link term dotfiles 
+#  file:
+#    src: "{{ item.src }}"
+#    dest: "{{ item.dest }}"
+#    state: link
+#  become: yes
+#  become_user: "{{ username }}"
+#  loop:
+#    - { src: "{{ dotfiles.kitty_destination }}", dest: "~/.config/kitty/kitty.conf" }
+#    - { src: "{{ dotfiles.terminator_destination }}", dest: "~/.config/terminator/config" }
+
