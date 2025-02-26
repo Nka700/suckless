@@ -1,0 +1,15 @@
+---
+
+- name: Reboot the server
+  reboot:
+    msg: "Reboot initiated by Ansible after dwm setup"
+    reboot_timeout: 300
+  register: reboot_result
+
+- name: Wait for the server to come back up
+  wait_for:
+    host: "{{ inventory_hostname }}"
+    port: 22
+    delay: 5
+    timeout: 300
+  when: reboot_result is changed
