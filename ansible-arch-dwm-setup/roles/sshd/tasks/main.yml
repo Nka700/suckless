@@ -1,0 +1,10 @@
+---
+
+- name: edit sshd_config
+  become: True
+  lineinfile:
+    path: /etc/ssh/sshd_config
+    state: present
+    regexp: '^PermitRootLogin yes'
+    line: 'PermitRootLogin no'
+
