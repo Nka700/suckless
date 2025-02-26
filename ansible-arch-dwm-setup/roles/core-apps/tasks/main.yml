@@ -93,10 +93,13 @@
       - jq
       - lshw
       - mpv
-      - noto-fonts-cjk
+      - noto-fonts
       - noto-fonts-cjk
       - noto-fonts-emoji
       - noto-fonts-emoji
+      - ttf-nerd-fonts-symbols
+      - ttf-nerd-fonts-symbols-common
+      - ttf-font-awesome
       - nvidia
       - nvidia-settings
       - nvidia-utils

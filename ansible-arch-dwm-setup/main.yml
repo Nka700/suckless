@@ -90,4 +90,9 @@
   roles:
     - sshd
 
+#- name: reboot machine
+#  hosts: all
+#  become: yes
+#  roles:
+#    - reboot
 
