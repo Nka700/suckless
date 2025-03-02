@@ -20,7 +20,7 @@
     repo: "{{ suckless.url }}"
     dest: "{{ suckless.destination }}"
     version: "{{ suckless.version }}"
-    update: yes
+    update: no
   become: yes
 
 - name: build suckless software

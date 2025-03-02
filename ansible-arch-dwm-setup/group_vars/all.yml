@@ -16,11 +16,10 @@ paru:
   pkg_install_shell: paru -S --noconfirm nitrogen 
 
 yay:
-  git_url: https://aur.archlinux.org/yay.git
+  git_url: https://aur.archlinux.org/yay-bin.git
   install_dir: /usr/bin/yay
-  build_dir: /home/{{ username }}/yay
+  build_dir: /home/{{ username }}/yay-bin
   install_shell: makepkg -sf --noconfirm
-  pkg_install_shell: yay -S --noconfirm obmenu obmenu-generator nitrogen rcm
 
 ## zplug info
 zplug:
