@@ -6,9 +6,7 @@
       - libx11
       - libxft
       - libxinerama
-      - lightdm
-      - lightdm-gtk-greeter
-      - lightdm-gtk-greeter-settings
+      - ly
       - openbox
       - xfce4-settings
       - lxappearance-gtk3
@@ -40,9 +38,9 @@
     dest: /usr/share/xsessions/dwm.desktop
     mode: '0644'
 
-- name: enable lightdm
+- name: enable login manager
   systemd:
-    name: lightdm.service
+    name: ly.service
     daemon_reload: yes
     enabled: yes
   become: yes
