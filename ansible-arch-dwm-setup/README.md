@@ -1,6 +1,5 @@
 # Description
-Ansible to build an openbox desktop environment for arch linux.  
-Needs to run from localhost.  
+Ansible to build an dwm desktop environment for arch linux.  
 
 # Usage
 
