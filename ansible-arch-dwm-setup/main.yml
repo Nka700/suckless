@@ -6,93 +6,29 @@
     pacman:
       update_cache: yes
 
-- name: setup user and group
-  hosts: all
-  become: yes
-  roles:
-    - user
-
-- name: Configure pacman (colorize and repos)
-  hosts: all
-  become: yes
-  roles:
-    - pacman
-
-- name: Basic apps (vlc, kitty, etc.)
-  hosts: all
-  become: yes
-  roles:
-    - core-apps
-
-- name: Dotfiles
-  hosts: all
-  become: yes
-  roles:
-    - dotfiles
-
-- name: Install and configure zsh
-  hosts: all
-  become: yes
-  roles:
-    - { role: zsh, when: setup_zsh | default(false) | bool }
-
-- name: setup dwm
-  hosts: all
-  become: yes
-  roles:
-    - { role: dwm, when: install_dwm | default(false) | bool }
-
-- name: Web Browser
+- name: Setup Arch Linux desktop with dwm
   hosts: all
   become: yes
   vars_files:
     - group_vars/all.yml
   roles:
+    - user
+    - pacman
+    - core-apps
+    - dotfiles
+    - role: zsh
+      when: setup_zsh | default(false) | bool
+    - role: dwm
+      when: install_dwm | default(false) | bool
     - "{{ browser }}"
-
-- name: Terminal web browsers
-  hosts: all
-  become: yes
-  roles:
-    - { role: terminal_browsers, when: install_terminal_browsers | default(false) | bool }
-
-- name: AUR apps
-  hosts: all
-  become: yes
-  roles:
-    - { role: aur, when: use_aur | default(false) | bool }
-
-#- name: python apps
-#  roles:
-#    - { role: pythonpkg, when: install_pythonpkg | default(false) | bool }
-
-- name: add user to group
-  hosts: all
-  become: yes
-  roles:
+    - role: terminal_browsers
+      when: install_terminal_browsers | default(false) | bool
+    - role: aur
+      when: use_aur | default(false) | bool
     - group
-
-- name: authorized_keys
-  hosts: all
-  become: yes
-  roles:
     - authorized_keys
-
-- name: Configure tlp
-  hosts: all
-  become: yes
-  roles:
-    - { role: power-management, when: configure_tlp | default(false) | bool }
-
-- name: Configure sshd
-  hosts: all
-  become: yes
-  roles:
+    - role: power-management
+      when: configure_tlp | default(false) | bool
     - sshd
-
-#- name: reboot machine
-#  hosts: all
-#  become: yes
-#  roles:
-#    - reboot
-
+    #- role: reboot
+    #  when: reboot_after_setup | default(false) | bool
