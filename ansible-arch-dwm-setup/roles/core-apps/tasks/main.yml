@@ -76,6 +76,7 @@
       - bat
       - blueman
       - bluez
+      - bluez-utils
       - conky
       - docker
       - docker-compose
