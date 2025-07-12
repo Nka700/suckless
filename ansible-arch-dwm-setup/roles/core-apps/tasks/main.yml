@@ -41,8 +41,9 @@
     - xorg-xdpyinfo
     - x11-ssh-askpass
     - man-db
-   state: latest
-   update_cache: yes
+   state: present
+   #state: latest
+   #update_cache: yes
 
 - name: Install archival utils
   pacman:
@@ -76,6 +77,7 @@
       - bat
       - blueman
       - bluez
+      - bluez-utils
       - conky
       - docker
       - docker-compose
