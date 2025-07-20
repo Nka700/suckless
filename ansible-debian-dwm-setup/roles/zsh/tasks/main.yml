@@ -1,0 +1,23 @@
+---
+- name: change "{{ username }}" shell to zsh
+  become: yes
+  user:
+    name: "{{ username }}"
+    append: yes
+    shell: /usr/bin/zsh
+
+- name: Stat zplug
+  become: yes
+  become_user: '{{ username }}'
+  stat:
+    path: "{{ zplug.install_dir }}"
+  register: zplug_dir
+
+- name: Install zplug for users
+  become: yes
+  become_user: '{{ username }}'
+  git:
+    repo: "{{ zplug.git_url }}"
+    dest: "{{ zplug.install_dir }}"
+  when: not zplug_dir.stat.exists
+

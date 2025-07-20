@@ -1,0 +1,19 @@
+- name: Setup Debian desktop with dwm
+  hosts: all
+  become: yes
+  vars_files:
+    - group_vars/all.yml
+  roles:
+    - user
+    - core-apps
+    - fonts
+    - dotfiles
+    - role: zsh
+      when: setup_zsh | default(false) | bool
+    - role: dwm
+      when: install_dwm | default(false) | bool
+    - group
+    - authorized_keys
+    - role: power-management
+      when: configure_tlp | default(false) | bool
+    - sshd
