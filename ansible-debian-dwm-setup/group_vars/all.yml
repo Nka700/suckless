@@ -1,0 +1,40 @@
+### Playbook Configuration Variables
+
+## User info
+#username: 
+
+## zplug info
+zplug:
+  git_url: https://github.com/zplug/zplug
+  install_dir: ~/.zplug
+
+## Task Configuration
+setup_zsh: True
+
+## Dotfiles
+## Please make sure to update 
+pull_dotfiles: True
+home_dir: "/home/{{ username }}"
+
+dotfiles:
+    url: https://github.com/Nka700/.dotfiles.git
+    version: archdwmt490
+    destination: ~/.dotfiles
+
+## Desktop
+install_dwm: True
+
+## dwm 
+pull_suckless: True
+
+suckless:
+    url: https://github.com/Nka700/suckless.git
+    version: archt490
+
+## tlp vars
+configure_tlp: True
+
+## nerd_font
+nerd_font:
+  url: https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.2/JetBrainsMono.zip
+

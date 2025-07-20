@@ -1,0 +1,91 @@
+- name: Update apt cache
+  apt:
+    update_cache: yes
+
+- name: Upgrade all packages
+  apt:
+    upgrade: yes
+
+- name: Install core packages
+  apt:
+    name:
+      - accountsservice
+      - build-essential
+      - ca-certificates
+      - chromium
+      - curl
+      - conky
+      - copyq
+      - dbus-x11
+      - fcitx5-mozc
+      - fd-find
+      - ffmpeg
+      - fontconfig
+      - fonts-noto-cjk
+      - fonts-noto-color-emoji
+      - fzf
+      - git
+      - imagemagick
+      - jq
+      - kitty
+      - libx11-dev
+      - libxft-dev
+      - libxinerama-dev
+      - lightdm
+      - lxappearance
+      - network-manager-gnome
+      - nitrogen
+      - p7zip-full
+      - poppler-utils
+      - redshift
+      - ripgrep
+      - rofi
+      - stow
+      - tlp
+      - unzip
+      - x11-xserver-utils
+      - xorg
+      - xrdp
+      - zoxide
+      - zsh
+    state: present
+
+- name: enable sshd
+  systemd:
+    name: sshd.service
+    state: started
+    daemon_reload: yes
+    enabled: yes
+  become: yes
+
+- name: Create directory for Docker GPG keyrings
+  file:
+    path: /etc/apt/keyrings
+    state: directory
+    mode: '0755'
+
+- name: Download Docker's official GPG key
+  get_url:
+    url: https://download.docker.com/linux/debian/gpg
+    dest: /etc/apt/keyrings/docker.asc
+    mode: '0644'
+
+- name: Add Docker repository to Apt sources
+  shell: |
+    echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/debian $(. /etc/os-release && echo \"$VERSION_CODENAME\") stable" > /etc/apt/sources.list.d/docker.list
+  args:
+    creates: /etc/apt/sources.list.d/docker.list
+
+- name: Update apt cache for Docker repository
+  apt:
+    update_cache: yes
+
+- name: Install docker packages
+  apt:
+    name:
+      - docker-ce
+      - docker-ce-cli
+      - containerd.io
+      - docker-buildx-plugin
+      - docker-compose-plugin
+    state: present

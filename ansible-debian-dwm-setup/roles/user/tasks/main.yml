@@ -1,0 +1,20 @@
+---
+
+- name: add "{{ username }}" user
+  become: yes
+  user:
+    name: "{{ username }}"
+    password: "{{ upassword | password_hash('sha512') }}"
+    append: yes
+    groups:
+      - sudo
+
+- name: add "{{ username }}" user  to sudoers
+  become: True
+  lineinfile:
+    path: /etc/sudoers
+    state: present
+    regexp: '^#?%sudo ALL=.*'
+    line: '%sudo ALL=(ALL:ALL) ALL'
+    validate: 'visudo -cf %s'
+

@@ -1,0 +1,20 @@
+---
+
+- name: "add user docker"
+  user:
+    name: "{{ username }}"
+    groups:
+      - docker
+      - users
+      - adm
+      - dialout
+      - cdrom
+      - floppy
+      - sudo
+      - audio
+      - dip
+      - video
+      - plugdev
+    append: yes
+  become: yes
+
