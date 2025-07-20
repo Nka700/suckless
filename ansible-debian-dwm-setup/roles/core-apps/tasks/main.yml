@@ -11,39 +11,40 @@
     name:
       - accountsservice
       - build-essential
+      - conky
+      - copyq
+      - dbus-x11
+      - docker
+      - fcitx5-mozc
+      - fd-find
+      - ffmpeg
+      - fontconfig
+      - fonts-noto-cjk
+      - fonts-noto-color-emoji
+      - fzf
+      - git
+      - imagemagick
+      - jq
+      - kitty
       - libx11-dev
       - libxft-dev
       - libxinerama-dev
       - lightdm
       - lxappearance
-      - xorg
-      - dbus-x11
-      - x11-xserver-utils
-      - xrdp
-      - fonts-noto-cjk
-      - fonts-noto-color-emoji
-      - unzip
-      - fontconfig
-      - git
-      - ffmpeg
-      - p7zip-full
-      - jq
-      - poppler-utils
-      - fd-find
-      - ripgrep
-      - fzf
-      - zoxide
-      - imagemagick
-      - rofi
-      - fcitx5-mozc
-      - zsh
-      - nitrogen
-      - copyq
-      - conky
       - network-manager-gnome
-      - kitty
+      - nitrogen
+      - p7zip-full
+      - poppler-utils
       - redshift
+      - ripgrep
+      - rofi
       - stow
+      - unzip
+      - x11-xserver-utils
+      - xorg
+      - xrdp
+      - zoxide
+      - zsh
     state: present
 
 - name: enable sshd
