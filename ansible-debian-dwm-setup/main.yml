@@ -13,7 +13,7 @@
     - role: suckless
       when: install_dwm | default(false) | bool
     - group
-    - authorized_keys
+#    - authorized_keys
     - role: power-management
       when: configure_tlp | default(false) | bool
     - sshd
