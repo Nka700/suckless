@@ -1,0 +1,45 @@
+- name: Clone suckless repository
+  git:
+    repo: "{{ suckless.url }}"
+    dest: "{{ home_dir }}/suckless"
+    version: "{{ suckless.version }}"
+    update: no
+    force: no
+    accept_hostkey: yes
+    owner: "{{ username }}"
+    group: "{{ username }}"
+
+- name: Build and install suckless tools
+  shell: make clean install
+  args:
+    chdir: "{{ home_dir }}/suckless/{{ item }}"
+  loop:
+    - dwm
+    - slstatus
+    - dmenu
+    - st
+
+- name: Deploy dwm.desktop using template
+  template:
+    src: dwm.desktop.j2
+    dest: /usr/share/xsessions/dwm.desktop
+    mode: '0644'
+
+- name: Create symlink for dwm
+  file:
+    src: /usr/local/bin/dwm
+    dest: /usr/bin/dwm
+    state: link
+
+- name: enable login manager
+  systemd:
+    name: lightdm.service
+    daemon_reload: yes
+    enabled: yes
+  become: yes
+
+- name: Enable and start xrdp
+  service:
+    name: xrdp
+    state: started
+    enabled: yes

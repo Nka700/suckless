@@ -10,7 +10,7 @@
     - dotfiles
     - role: zsh
       when: setup_zsh | default(false) | bool
-    - role: dwm
+    - role: suckless
       when: install_dwm | default(false) | bool
     - group
     - authorized_keys
