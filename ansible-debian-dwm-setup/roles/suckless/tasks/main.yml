@@ -6,8 +6,6 @@
     update: no
     force: no
     accept_hostkey: yes
-    owner: "{{ username }}"
-    group: "{{ username }}"
 
 - name: Build and install suckless tools
   shell: make clean install
