@@ -16,7 +16,6 @@
       - conky
       - copyq
       - dbus-x11
-      - docker
       - fcitx5-mozc
       - fd-find
       - ffmpeg
@@ -57,13 +56,6 @@
     enabled: yes
   become: yes
 
-- name: enable docker
-  systemd:
-    name: docker.service
-    daemon_reload: yes
-    enabled: yes
-  become: yes
-
 - name: Create directory for Docker GPG keyrings
   file:
     path: /etc/apt/keyrings
@@ -86,3 +78,12 @@
   apt:
     update_cache: yes
 
+- name: Install docker packages
+  apt:
+    name:
+      - docker-ce
+      - docker-ce-cli
+      - containerd.io
+      - docker-buildx-plugin
+      - docker-compose-plugin
+    state: present
