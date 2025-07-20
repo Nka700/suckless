@@ -12,6 +12,7 @@
       - accountsservice
       - build-essential
       - ca-certificates
+      - chromium
       - curl
       - conky
       - copyq
