@@ -33,8 +33,6 @@
     update: no
     force: no
     accept_hostkey: yes
-    owner: "{{ username }}"
-    group: "{{ username }}"
   become: yes
   become_user: "{{ username }}"
 
