@@ -1,5 +1,5 @@
 # Description
-Ansible to build an dwm desktop environment for arch linux.  
+Ansible to build an dwm desktop environment for Debian.  
 
 # Usage
 
