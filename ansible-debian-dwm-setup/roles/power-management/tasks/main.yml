@@ -1,0 +1,41 @@
+---
+
+- name: edit tlp.conf1
+  become: True
+  lineinfile:
+    path: /etc/tlp.conf
+    state: present
+    regexp: '^#TLP_ENABLE=1'
+    line: 'TLP_ENABLE=1'
+
+- name: edit tlp.conf2
+  become: True
+  lineinfile:
+    path: /etc/tlp.conf
+    state: present
+    regexp: '^#USB_AUTOSUSPEND=1'
+    line: 'USB_AUTOSUSPEND=0'
+
+- name: edit tlp.conf3
+  become: True
+  lineinfile:
+    path: /etc/tlp.conf
+    state: present
+    regexp: '^#TLP_DEFAULT_MODE=AC'
+    line: 'TLP_DEFAULT_MODE=BAT'
+
+- name: edit tlp.conf4
+  become: True
+  lineinfile:
+    path: /etc/tlp.conf
+    state: present
+    regexp: '^#TLP_PERSISTENT_DEFAULT=0'
+    line: 'TLP_PERSISTENT_DEFAULT=1'
+
+- name: enable tlp
+  systemd:
+    name: tlp.service
+    daemon_reload: yes
+    enabled: yes
+  become: yes
+

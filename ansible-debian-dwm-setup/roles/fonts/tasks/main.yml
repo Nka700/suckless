@@ -1,0 +1,40 @@
+- name: Ensure user fonts directory
+  file:
+    path: "{{ home_dir }}/.local/share/fonts"
+    state: directory
+    mode: '0755'
+    owner: "{{ username }}"
+    group: "{{ username }}"
+  become: yes
+  become_user: "{{ username }}"
+
+- name: Download NerdFont zip
+  get_url:
+    url: "{{ nerd_font.url }}"
+    dest: "{{ home_dir }}/.local/share/fonts/NerdFont.zip"
+    mode: '0644'
+    owner: "{{ username }}"
+    group: "{{ username }}"
+  become: yes
+  become_user: "{{ username }}"
+
+- name: Unarchive NerdFont
+  unarchive:
+    src: "{{ home_dir }}/.local/share/fonts/NerdFont.zip"
+    dest: "{{ home_dir }}/.local/share/fonts"
+    remote_src: yes
+    owner: "{{ username }}"
+    group: "{{ username }}"
+  become: yes
+  become_user: "{{ username }}"
+
+- name: Refresh font cache
+  command: fc-cache -fv
+
+- name: Remove zip file
+  file:
+    path: "{{ home_dir }}/.local/share/fonts/NerdFont.zip"
+    state: absent
+  become: yes
+  become_user: "{{ username }}"
+
