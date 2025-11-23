@@ -35,7 +35,7 @@ pull_dotfiles: True
 
 dotfiles:
     url: https://github.com/Nka700/.dotfiles.git
-    version: archx220dwm
+    version: archdwmt490
     destination: ~/.dotfiles
     packages:
       - conky

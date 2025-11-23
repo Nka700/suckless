@@ -102,9 +102,9 @@
       - ttf-nerd-fonts-symbols
       - ttf-nerd-fonts-symbols-common
       - ttf-font-awesome
-      - nvidia
-      - nvidia-settings
-      - nvidia-utils
+      #- nvidia
+      #- nvidia-settings
+      #- nvidia-utils
       - pamixer
       - pavucontrol
       - playerctl
