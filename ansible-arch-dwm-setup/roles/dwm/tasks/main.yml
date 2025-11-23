@@ -9,7 +9,7 @@
       - ly
       - openbox
       - xfce4-settings
-      - lxappearance-gtk3
+      - lxappearance
     state: present
   become: yes
 
