@@ -9,6 +9,7 @@
       - ly
       - openbox
       - xfce4-settings
+      - xsel
       - lxappearance
     state: present
   become: yes

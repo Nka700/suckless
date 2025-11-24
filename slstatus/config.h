@@ -68,8 +68,8 @@ static const struct arg args[] = {
  	{ cpu_perc,     "CPU  %3s%% "   , NULL},
  	{ cpu_freq,     "freq %4sHz |"  , NULL},
 	{ ram_perc,     "RAM  %3s%% |"  , NULL},
-	{ netspeed_rx,  "NW %6sB/s |" , "wlp0s20f3"},
-	{ netspeed_tx,  "NW  %6sB/s |" , "wlp0s20f3"},
-	{ battery_perc, "BAT  %3s%% |" , "BAT0"},
+	{ netspeed_rx,  "NW %6sB/s |" , "wlo1"},
+	{ netspeed_tx,  "NW  %6sB/s |" , "wlo1"},
+	{ battery_perc, "BAT  %3s%% |" , "BAT1"},
 	{ datetime,     "%s |"         , "%F %T" },
 };
