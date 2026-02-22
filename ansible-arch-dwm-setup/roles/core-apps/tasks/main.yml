@@ -1,54 +1,50 @@
 - name: pacman -Syu
   community.general.pacman:
-   update_cache: yes
-   upgrade: true
+    update_cache: yes
+    upgrade: true
 
 - name: install basic utils, shells, apps
   community.general.pacman:
-   name:
-    - archlinux-keyring
-    - acpi
-#    - acpilight
-    - bind
-    - cronie
-    - inetutils
-    - strace
-    - sysstat
-    - jgmenu
-    - base-devel
-    - htop
-    - kitty
-    - libva
-    - libva-intel-driver
-    - libva-utils
-    - network-manager-applet
-    - networkmanager
-    - networkmanager-openvpn
-    - openssh
-    - picom
-    - parted
-    - python-setuptools
-    - powertop
-    - source-highlight
-    - tint2
-    - tree
-    - tlp
-    - vi
-    - wpa_supplicant
-    - xfce4-power-manager
-    - xorg-xinput
-    - xorg-xwininfo
-    - xorg-xdpyinfo
-    - x11-ssh-askpass
-    - man-db
-   state: present
-   #state: latest
-   #update_cache: yes
+    name:
+      - archlinux-keyring
+      - acpi
+      - bind
+      - cronie
+      - inetutils
+      - strace
+      - sysstat
+      - jgmenu
+      - base-devel
+      - htop
+      - kitty
+      - libva
+      - libva-intel-driver
+      - libva-utils
+      - network-manager-applet
+      - networkmanager
+      - networkmanager-openvpn
+      - openssh
+      - picom
+      - parted
+      - python-setuptools
+      - powertop
+      - source-highlight
+      - tint2
+      - tree
+      - tlp
+      - vi
+      - wpa_supplicant
+      - xfce4-power-manager
+      - xorg-xinput
+      - xorg-xwininfo
+      - xorg-xdpyinfo
+      - x11-ssh-askpass
+      - man-db
+    state: present
 
 - name: Install archival utils
   pacman:
     name:
-#      - atool
       - p7zip
       - unrar
       - unzip
@@ -62,12 +58,23 @@
 - name: Install download utils
   pacman:
     name:
-#      - aria2
       - curl
       - wget
       - flatpak
       - python-pip
     state: present
+
+- name: Disable PulseAudio user services (if present)
+  become: false
+  systemd:
+    name: "{{ item }}"
+    scope: user
+    enabled: no
+    state: stopped
+  loop:
+    - pulseaudio.service
+    - pulseaudio.socket
+  ignore_errors: true
 
 - name: Install extra packages
   pacman:
@@ -91,13 +98,11 @@
       - git
       - go
       - gsimplecal
-      - gsimplecal
       - jq
       - lshw
       - mpv
       - noto-fonts
       - noto-fonts-cjk
-      - noto-fonts-emoji
       - noto-fonts-emoji
       - ttf-nerd-fonts-symbols
       - ttf-nerd-fonts-symbols-common
@@ -108,8 +113,14 @@
       - pamixer
       - pavucontrol
       - playerctl
-      - pulseaudio
-      - pulseaudio-bluetooth
+      # --- PipeWire stack (PulseAudio replacement) ---
+      - pipewire
+      - pipewire-audio
+      - pipewire-pulse
+      - wireplumber
+      - pipewire-alsa
+      - pipewire-jack
+      # ---------------------------------------------
       - redshift
       - rofi
       - slock
@@ -120,8 +131,15 @@
       - xf86-video-nouveau
       - gvim
       - python-pynvim
-#      - nvidia-dkms
     state: present
+
+- name: Remove pulseaudio packages (migrate to pipewire)
+  pacman:
+    name:
+      - pulseaudio
+      - pulseaudio-bluetooth
+    state: absent
+  become: yes
 
 #due to `× This environment is externally managed` error, fixed to use pacman for installing packages."
 #- name: Install python packages
@@ -145,3 +163,14 @@
     enabled: yes
   become: yes
 
+- name: Enable PipeWire user services
+  systemd:
+    name: "{{ item }}"
+    scope: user
+    enabled: yes
+    state: started
+  loop:
+    - pipewire.service
+    - pipewire-pulse.service
+    - wireplumber.service
+  become: no
