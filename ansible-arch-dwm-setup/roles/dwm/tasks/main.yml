@@ -1,8 +1,7 @@
-
 - name: Ensure necessary packages are installed
   pacman:
-    name: 
-      - base-devel   # gcc, make, etc.
+    name:
+      - base-devel # gcc, make, etc.
       - libx11
       - libxft
       - libxinerama
@@ -37,13 +36,11 @@
   template:
     src: dwm.desktop.j2
     dest: /usr/share/xsessions/dwm.desktop
-    mode: '0644'
+    mode: "0644"
 
 - name: enable login manager
   systemd:
-    name: ly.service
+    name: ly@tty2.service
     daemon_reload: yes
     enabled: yes
   become: yes
-
-

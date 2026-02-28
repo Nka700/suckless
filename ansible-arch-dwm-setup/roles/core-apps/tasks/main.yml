@@ -76,6 +76,14 @@
     - pulseaudio.socket
   ignore_errors: true
 
+- name: Remove pulseaudio packages (migrate to pipewire)
+  pacman:
+    name:
+      - pulseaudio
+      - pulseaudio-bluetooth
+    state: absent
+  become: yes
+
 - name: Install extra packages
   pacman:
     name:
@@ -107,7 +115,7 @@
       - ttf-nerd-fonts-symbols
       - ttf-nerd-fonts-symbols-common
       - ttf-font-awesome
-      - nvidia
+      - nvidia-open-dkms
       - nvidia-settings
       - nvidia-utils
       - pamixer
@@ -132,14 +140,6 @@
       - gvim
       - python-pynvim
     state: present
-
-- name: Remove pulseaudio packages (migrate to pipewire)
-  pacman:
-    name:
-      - pulseaudio
-      - pulseaudio-bluetooth
-    state: absent
-  become: yes
 
 #due to `× This environment is externally managed` error, fixed to use pacman for installing packages."
 #- name: Install python packages
@@ -172,5 +172,4 @@
   loop:
     - pipewire.service
     - pipewire-pulse.service
-    - wireplumber.service
   become: no
