@@ -3,7 +3,7 @@
   file:
     path: "{{ home_dir }}/.config/{{ item }}"
     state: directory
-    mode: '0755'
+    mode: "0755"
     owner: "{{ username }}"
     group: "{{ username }}"
   loop:
@@ -19,7 +19,7 @@
   file:
     path: "{{ home_dir }}/.local/bin"
     state: directory
-    mode: '0755'
+    mode: "0755"
     owner: "{{ username }}"
     group: "{{ username }}"
   become: yes
@@ -36,19 +36,10 @@
   become: yes
   become_user: "{{ username }}"
 
-- name: Deploy dotfiles
-  shell: stow {{ item }}
+- name: Stow dotfiles packages
+  command: "stow {{ item }}"
   args:
-    chdir: "{{ home_dir }}/.dotfiles"
-  loop:
-    - xorg
-    - zsh
-    - vim
-    - fcitx
-    - conky
-    - kitty
-    - local
-  environment:
-    HOME: "{{ home_dir }}"
+    chdir: "{{ dotfiles.destination }}"
+  loop: "{{ dotfiles.packages }}"
   become: yes
   become_user: "{{ username }}"
