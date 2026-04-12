@@ -17,6 +17,7 @@
       - base-devel
       - htop
       - kitty
+      - tmux
       - libva
       - libva-intel-driver
       - libva-utils
