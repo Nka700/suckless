@@ -1,0 +1,3319 @@
+{
+  "conversation_id": "e3bd538f-f99c-40e5-a175-8aa19d1736d7",
+  "next_message": null,
+  "history": [
+    {
+      "user": {
+        "additional_context": "",
+        "env_context": {
+          "env_state": {
+            "operating_system": "linux",
+            "current_working_directory": "/home/nka700/work/suckless",
+            "environment_variables": []
+          }
+        },
+        "content": {
+          "Prompt": {
+            "prompt": "`./ansible-debian-dwm-setup`配下にansible-playbookのコードが入っていることは認識できるか?"
+          }
+        },
+        "timestamp": "2026-04-12T17:27:00.764651349+09:00",
+        "images": null
+      },
+      "assistant": {
+        "ToolUse": {
+          "message_id": "fe62901e-8fb7-486c-ac1c-dbe5849ad75f",
+          "content": "\n\n確認してみます。",
+          "tool_uses": [
+            {
+              "id": "tooluse_0hWOqurwdQpgIuqbm5rbqH",
+              "name": "fs_read",
+              "orig_name": "fs_read",
+              "args": {
+                "operations": [
+                  {
+                    "mode": "Directory",
+                    "path": "/home/nka700/work/suckless/ansible-debian-dwm-setup",
+                    "depth": 2
+                  }
+                ]
+              },
+              "orig_args": {
+                "operations": [
+                  {
+                    "mode": "Directory",
+                    "path": "/home/nka700/work/suckless/ansible-debian-dwm-setup",
+                    "depth": 2
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      "request_metadata": {
+        "request_id": "7ee3b41b-347b-4c18-975b-c3e131899aab",
+        "context_usage_percentage": 2.2837,
+        "message_id": "fe62901e-8fb7-486c-ac1c-dbe5849ad75f",
+        "request_start_timestamp_ms": 1775982420765,
+        "stream_end_timestamp_ms": 1775982424969,
+        "time_to_first_chunk": {
+          "secs": 2,
+          "nanos": 843702772
+        },
+        "time_between_chunks": [
+          {
+            "secs": 0,
+            "nanos": 22085
+          },
+          {
+            "secs": 0,
+            "nanos": 16252904
+          },
+          {
+            "secs": 0,
+            "nanos": 52838097
+          },
+          {
+            "secs": 0,
+            "nanos": 272915357
+          },
+          {
+            "secs": 0,
+            "nanos": 19911
+          },
+          {
+            "secs": 0,
+            "nanos": 812036210
+          },
+          {
+            "secs": 0,
+            "nanos": 25213
+          },
+          {
+            "secs": 0,
+            "nanos": 10879
+          },
+          {
+            "secs": 0,
+            "nanos": 9002
+          },
+          {
+            "secs": 0,
+            "nanos": 8857
+          },
+          {
+            "secs": 0,
+            "nanos": 9687
+          },
+          {
+            "secs": 0,
+            "nanos": 8242
+          },
+          {
+            "secs": 0,
+            "nanos": 7978
+          },
+          {
+            "secs": 0,
+            "nanos": 7510
+          },
+          {
+            "secs": 0,
+            "nanos": 34741
+          },
+          {
+            "secs": 0,
+            "nanos": 204933694
+          },
+          {
+            "secs": 0,
+            "nanos": 47540
+          },
+          {
+            "secs": 0,
+            "nanos": 40684
+          },
+          {
+            "secs": 0,
+            "nanos": 9315
+          },
+          {
+            "secs": 0,
+            "nanos": 8219
+          },
+          {
+            "secs": 0,
+            "nanos": 8463
+          },
+          {
+            "secs": 0,
+            "nanos": 8902
+          },
+          {
+            "secs": 0,
+            "nanos": 21738
+          },
+          {
+            "secs": 0,
+            "nanos": 11557
+          },
+          {
+            "secs": 0,
+            "nanos": 55630
+          }
+        ],
+        "user_prompt_length": 269,
+        "response_size": 135,
+        "chat_conversation_type": "ToolUse",
+        "tool_use_ids_and_names": [
+          [
+            "tooluse_0hWOqurwdQpgIuqbm5rbqH",
+            "fs_read"
+          ]
+        ],
+        "model_id": "auto",
+        "message_meta_tags": []
+      }
+    },
+    {
+      "user": {
+        "additional_context": "",
+        "env_context": {
+          "env_state": {
+            "operating_system": "linux",
+            "current_working_directory": "/home/nka700/work/suckless",
+            "environment_variables": []
+          }
+        },
+        "content": {
+          "ToolUseResults": {
+            "tool_use_results": [
+              {
+                "tool_use_id": "tooluse_0hWOqurwdQpgIuqbm5rbqH",
+                "content": [
+                  {
+                    "Text": "# Total entries: 33\n\n-rw-r--r-- 1 1000 1000 423 Nov 23 01:10 /home/nka700/work/suckless/ansible-debian-dwm-setup/main.yml\ndrwxr-xr-x 2 1000 1000 4096 Nov 23 01:10 /home/nka700/work/suckless/ansible-debian-dwm-setup/group_vars\ndrwxr-xr-x 12 1000 1000 4096 Nov 23 01:10 /home/nka700/work/suckless/ansible-debian-dwm-setup/roles\n-rw-r--r-- 1 1000 1000 260 Nov 23 01:10 /home/nka700/work/suckless/ansible-debian-dwm-setup/ansible.cfg\n-rw-r--r-- 1 1000 1000 392 Nov 23 01:10 /home/nka700/work/suckless/ansible-debian-dwm-setup/README.md\n-rw-r--r-- 1 1000 1000 690 Nov 23 01:10 /home/nka700/work/suckless/ansible-debian-dwm-setup/group_vars/all.yml\ndrwxr-xr-x 4 1000 1000 4096 Nov 23 01:10 /home/nka700/work/suckless/ansible-debian-dwm-setup/roles/dotfiles\ndrwxr-xr-x 4 1000 1000 4096 Nov 23 01:10 /home/nka700/work/suckless/ansible-debian-dwm-setup/roles/fonts\ndrwxr-xr-x 3 1000 1000 4096 Nov 23 01:10 /home/nka700/work/suckless/ansible-debian-dwm-setup/roles/zsh\ndrwxr-xr-x 4 1000 1000 4096 Nov 23 01:10 /home/nka700/work/suckless/ansible-debian-dwm-setup/roles/group\ndrwxr-xr-x 4 1000 1000 4096 Nov 23 01:10 /home/nka700/work/suckless/ansible-debian-dwm-setup/roles/user\ndrwxr-xr-x 4 1000 1000 4096 Nov 23 01:10 /home/nka700/work/suckless/ansible-debian-dwm-setup/roles/authorized_keys\ndrwxr-xr-x 3 1000 1000 4096 Nov 23 01:10 /home/nka700/work/suckless/ansible-debian-dwm-setup/roles/core-apps\ndrwxr-xr-x 3 1000 1000 4096 Nov 23 01:10 /home/nka700/work/suckless/ansible-debian-dwm-setup/roles/sshd\ndrwxr-xr-x 5 1000 1000 4096 Nov 23 01:10 /home/nka700/work/suckless/ansible-debian-dwm-setup/roles/suckless\ndrwxr-xr-x 3 1000 1000 4096 Nov 23 01:10 /home/nka700/work/suckless/ansible-debian-dwm-setup/roles/power-management\ndrwxr-xr-x 2 1000 1000 4096 Nov 23 01:10 /home/nka700/work/suckless/ansible-debian-dwm-setup/roles/dotfiles/tasks\ndrwxr-xr-x 2 1000 1000 4096 Nov 23 01:10 /home/nka700/work/suckless/ansible-debian-dwm-setup/roles/dotfiles/handlers\ndrwxr-xr-x 2 1000 1000 4096 Nov 23 01:10 /home/nka700/work/suckless/ansible-debian-dwm-setup/roles/fonts/tasks\ndrwxr-xr-x 2 1000 1000 4096 Nov 23 01:10 /home/nka700/work/suckless/ansible-debian-dwm-setup/roles/fonts/handlers\ndrwxr-xr-x 2 1000 1000 4096 Nov 23 01:10 /home/nka700/work/suckless/ansible-debian-dwm-setup/roles/zsh/tasks\ndrwxr-xr-x 2 1000 1000 4096 Nov 23 01:10 /home/nka700/work/suckless/ansible-debian-dwm-setup/roles/group/tasks\ndrwxr-xr-x 2 1000 1000 4096 Nov 23 01:10 /home/nka700/work/suckless/ansible-debian-dwm-setup/roles/group/handlers\ndrwxr-xr-x 2 1000 1000 4096 Nov 23 01:10 /home/nka700/work/suckless/ansible-debian-dwm-setup/roles/user/tasks\ndrwxr-xr-x 2 1000 1000 4096 Nov 23 01:10 /home/nka700/work/suckless/ansible-debian-dwm-setup/roles/user/handlers\ndrwxr-xr-x 2 1000 1000 4096 Nov 23 01:10 /home/nka700/work/suckless/ansible-debian-dwm-setup/roles/authorized_keys/tasks\ndrwxr-xr-x 2 1000 1000 4096 Nov 23 01:10 /home/nka700/work/suckless/ansible-debian-dwm-setup/roles/authorized_keys/handlers\ndrwxr-xr-x 2 1000 1000 4096 Nov 23 01:10 /home/nka700/work/suckless/ansible-debian-dwm-setup/roles/core-apps/tasks\ndrwxr-xr-x 2 1000 1000 4096 Nov 23 01:10 /home/nka700/work/suckless/ansible-debian-dwm-setup/roles/sshd/tasks\ndrwxr-xr-x 2 1000 1000 4096 Nov 23 01:10 /home/nka700/work/suckless/ansible-debian-dwm-setup/roles/suckless/tasks\ndrwxr-xr-x 2 1000 1000 4096 Nov 23 01:10 /home/nka700/work/suckless/ansible-debian-dwm-setup/roles/suckless/handlers\ndrwxr-xr-x 2 1000 1000 4096 Nov 23 01:10 /home/nka700/work/suckless/ansible-debian-dwm-setup/roles/suckless/templates\ndrwxr-xr-x 2 1000 1000 4096 Nov 23 01:10 /home/nka700/work/suckless/ansible-debian-dwm-setup/roles/power-management/tasks"
+                  }
+                ],
+                "status": "Success"
+              }
+            ]
+          }
+        },
+        "timestamp": null,
+        "images": null
+      },
+      "assistant": {
+        "Response": {
+          "message_id": "df3919e7-7a08-4dfe-a769-ffe70c2d1db6",
+          "content": "はい、認識できます。`./ansible-debian-dwm-setup` 配下はAnsible Playbookのプロジェクトで、以下の構成になっています:\n\n- `main.yml` — メインのPlaybook\n- `ansible.cfg` — Ansible設定ファイル\n- `group_vars/all.yml` — グループ変数\n- `roles/` — 10個のロール:\n  - `group`, `user`, `authorized_keys` — ユーザー/グループ管理\n  - `sshd` — SSH設定\n  - `core-apps` — 基本パッケージ\n  - `suckless` — suckless系ツール(dwm等)のビルド・セットアップ\n  - `fonts` — フォント\n  - `dotfiles` — dotfiles配置\n  - `zsh` — zsh設定\n  - `power-management` — 電源管理\n\nDebian環境にdwmベースのデスクトップ環境を構築するためのPlaybookですね。何か操作しますか?"
+        }
+      },
+      "request_metadata": {
+        "request_id": "e362b6e7-193e-49a3-a934-082bae863516",
+        "context_usage_percentage": 2.5010998,
+        "message_id": "df3919e7-7a08-4dfe-a769-ffe70c2d1db6",
+        "request_start_timestamp_ms": 1775982425070,
+        "stream_end_timestamp_ms": 1775982432545,
+        "time_to_first_chunk": {
+          "secs": 2,
+          "nanos": 868473450
+        },
+        "time_between_chunks": [
+          {
+            "secs": 0,
+            "nanos": 28221
+          },
+          {
+            "secs": 0,
+            "nanos": 6829
+          },
+          {
+            "secs": 0,
+            "nanos": 40638432
+          },
+          {
+            "secs": 0,
+            "nanos": 3359206
+          },
+          {
+            "secs": 0,
+            "nanos": 39719311
+          },
+          {
+            "secs": 0,
+            "nanos": 51911168
+          },
+          {
+            "secs": 0,
+            "nanos": 53206922
+          },
+          {
+            "secs": 0,
+            "nanos": 53417344
+          },
+          {
+            "secs": 0,
+            "nanos": 55715084
+          },
+          {
+            "secs": 0,
+            "nanos": 111288209
+          },
+          {
+            "secs": 0,
+            "nanos": 43582538
+          },
+          {
+            "secs": 0,
+            "nanos": 53920011
+          },
+          {
+            "secs": 0,
+            "nanos": 52673248
+          },
+          {
+            "secs": 0,
+            "nanos": 51484986
+          },
+          {
+            "secs": 0,
+            "nanos": 52051124
+          },
+          {
+            "secs": 0,
+            "nanos": 52415618
+          },
+          {
+            "secs": 0,
+            "nanos": 51779808
+          },
+          {
+            "secs": 0,
+            "nanos": 78426999
+          },
+          {
+            "secs": 0,
+            "nanos": 28636312
+          },
+          {
+            "secs": 0,
+            "nanos": 51084388
+          },
+          {
+            "secs": 0,
+            "nanos": 52515166
+          },
+          {
+            "secs": 0,
+            "nanos": 52213389
+          },
+          {
+            "secs": 0,
+            "nanos": 52982169
+          },
+          {
+            "secs": 0,
+            "nanos": 56481054
+          },
+          {
+            "secs": 0,
+            "nanos": 77824953
+          },
+          {
+            "secs": 0,
+            "nanos": 51531856
+          },
+          {
+            "secs": 0,
+            "nanos": 25340169
+          },
+          {
+            "secs": 0,
+            "nanos": 52470153
+          },
+          {
+            "secs": 0,
+            "nanos": 51192475
+          },
+          {
+            "secs": 0,
+            "nanos": 51119724
+          },
+          {
+            "secs": 0,
+            "nanos": 52326751
+          },
+          {
+            "secs": 0,
+            "nanos": 135255820
+          },
+          {
+            "secs": 0,
+            "nanos": 9639
+          },
+          {
+            "secs": 0,
+            "nanos": 20073457
+          },
+          {
+            "secs": 0,
+            "nanos": 50253308
+          },
+          {
+            "secs": 0,
+            "nanos": 49722506
+          },
+          {
+            "secs": 0,
+            "nanos": 78113914
+          },
+          {
+            "secs": 0,
+            "nanos": 23334438
+          },
+          {
+            "secs": 0,
+            "nanos": 50684001
+          },
+          {
+            "secs": 0,
+            "nanos": 55049233
+          },
+          {
+            "secs": 0,
+            "nanos": 47254921
+          },
+          {
+            "secs": 0,
+            "nanos": 50637993
+          },
+          {
+            "secs": 0,
+            "nanos": 64804987
+          },
+          {
+            "secs": 0,
+            "nanos": 31628780
+          },
+          {
+            "secs": 0,
+            "nanos": 60982762
+          },
+          {
+            "secs": 0,
+            "nanos": 74205231
+          },
+          {
+            "secs": 0,
+            "nanos": 30863767
+          },
+          {
+            "secs": 0,
+            "nanos": 39945215
+          },
+          {
+            "secs": 0,
+            "nanos": 49481703
+          },
+          {
+            "secs": 0,
+            "nanos": 49707064
+          },
+          {
+            "secs": 0,
+            "nanos": 52679503
+          },
+          {
+            "secs": 0,
+            "nanos": 50211404
+          },
+          {
+            "secs": 0,
+            "nanos": 50246350
+          },
+          {
+            "secs": 0,
+            "nanos": 50095306
+          },
+          {
+            "secs": 0,
+            "nanos": 52540694
+          },
+          {
+            "secs": 0,
+            "nanos": 50186698
+          },
+          {
+            "secs": 0,
+            "nanos": 49992848
+          },
+          {
+            "secs": 0,
+            "nanos": 51826154
+          },
+          {
+            "secs": 0,
+            "nanos": 50340241
+          },
+          {
+            "secs": 0,
+            "nanos": 148041399
+          },
+          {
+            "secs": 0,
+            "nanos": 19219
+          },
+          {
+            "secs": 0,
+            "nanos": 4141658
+          },
+          {
+            "secs": 0,
+            "nanos": 51824308
+          },
+          {
+            "secs": 0,
+            "nanos": 54109267
+          },
+          {
+            "secs": 0,
+            "nanos": 51578015
+          },
+          {
+            "secs": 0,
+            "nanos": 52503085
+          },
+          {
+            "secs": 0,
+            "nanos": 51277742
+          },
+          {
+            "secs": 0,
+            "nanos": 56102849
+          },
+          {
+            "secs": 0,
+            "nanos": 52565404
+          },
+          {
+            "secs": 0,
+            "nanos": 49977184
+          },
+          {
+            "secs": 0,
+            "nanos": 55641062
+          },
+          {
+            "secs": 0,
+            "nanos": 50038767
+          },
+          {
+            "secs": 0,
+            "nanos": 51794353
+          },
+          {
+            "secs": 0,
+            "nanos": 135118182
+          },
+          {
+            "secs": 0,
+            "nanos": 19867398
+          },
+          {
+            "secs": 0,
+            "nanos": 51824189
+          },
+          {
+            "secs": 0,
+            "nanos": 51142181
+          },
+          {
+            "secs": 0,
+            "nanos": 184152534
+          },
+          {
+            "secs": 0,
+            "nanos": 18629
+          },
+          {
+            "secs": 0,
+            "nanos": 9537
+          },
+          {
+            "secs": 0,
+            "nanos": 23423702
+          },
+          {
+            "secs": 0,
+            "nanos": 87585604
+          },
+          {
+            "secs": 0,
+            "nanos": 19934460
+          },
+          {
+            "secs": 0,
+            "nanos": 47691089
+          },
+          {
+            "secs": 0,
+            "nanos": 52024581
+          },
+          {
+            "secs": 0,
+            "nanos": 53910170
+          },
+          {
+            "secs": 0,
+            "nanos": 50139686
+          },
+          {
+            "secs": 0,
+            "nanos": 50943951
+          },
+          {
+            "secs": 0,
+            "nanos": 125613312
+          },
+          {
+            "secs": 0,
+            "nanos": 18287
+          },
+          {
+            "secs": 0,
+            "nanos": 21103
+          }
+        ],
+        "user_prompt_length": 0,
+        "response_size": 788,
+        "chat_conversation_type": "NotToolUse",
+        "tool_use_ids_and_names": [],
+        "model_id": "auto",
+        "message_meta_tags": []
+      }
+    },
+    {
+      "user": {
+        "additional_context": "",
+        "env_context": {
+          "env_state": {
+            "operating_system": "linux",
+            "current_working_directory": "/home/nka700/work/suckless",
+            "environment_variables": []
+          }
+        },
+        "content": {
+          "Prompt": {
+            "prompt": "ansibleを実行したところ、以下のエラーが出る ```TASK [fonts : Ensure user fonts directory] ************************************************************************************************************************************************************************\ntask path: /home/ssm-user/suckless/ansible-debian-dwm-setup/roles/fonts/tasks/main.yml:1\n<localhost> ESTABLISH LOCAL CONNECTION FOR USER: ssm-user\n<localhost> EXEC /bin/sh -c 'echo ~ssm-user && sleep 0'\n<localhost> EXEC /bin/sh -c '( umask 77 && mkdir -p \"` echo /var/tmp `\"&& mkdir \"` echo /var/tmp/ansible-tmp-1775982163.9649205-28861-18331849849081 `\" && echo ansible-tmp-1775982163.9649205-28861-18331849849081=\"` echo /var/tmp/ansible-tmp-1775982163.9649205-28861-18331849849081 `\" ) && sleep 0'\nUsing module file /usr/lib/python3/dist-packages/ansible/modules/file.py\n<localhost> PUT /home/ssm-user/.ansible/tmp/ansible-local-28056u5trrmis/tmpnwxvbo99 TO /var/tmp/ansible-tmp-1775982163.9649205-28861-18331849849081/AnsiballZ_file.py\n<localhost> EXEC /bin/sh -c 'setfacl -m u:johnd:r-x /var/tmp/ansible-tmp-1775982163.9649205-28861-18331849849081/ /var/tmp/ansible-tmp-1775982163.9649205-28861-18331849849081/AnsiballZ_file.py && sleep 0'\n<localhost> EXEC /bin/sh -c 'chmod u+x /var/tmp/ansible-tmp-1775982163.9649205-28861-18331849849081/ /var/tmp/ansible-tmp-1775982163.9649205-28861-18331849849081/AnsiballZ_file.py && sleep 0'\n<localhost> EXEC /bin/sh -c 'chown johnd /var/tmp/ansible-tmp-1775982163.9649205-28861-18331849849081/ /var/tmp/ansible-tmp-1775982163.9649205-28861-18331849849081/AnsiballZ_file.py && sleep 0'\n<localhost> EXEC /bin/sh -c 'chmod +a '\"'\"'johnd allow read,execute'\"'\"' /var/tmp/ansible-tmp-1775982163.9649205-28861-18331849849081/ /var/tmp/ansible-tmp-1775982163.9649205-28861-18331849849081/AnsiballZ_file.py && sleep 0'\n<localhost> EXEC /bin/sh -c 'chmod A+user:johnd:rx:allow /var/tmp/ansible-tmp-1775982163.9649205-28861-18331849849081/ /var/tmp/ansible-tmp-1775982163.9649205-28861-18331849849081/AnsiballZ_file.py && sleep 0'\n<localhost> EXEC /bin/sh -c 'rm -f -r /var/tmp/ansible-tmp-1775982163.9649205-28861-18331849849081/ > /dev/null 2>&1 && sleep 0'\nfatal: [localhost]: FAILED! => {\n    \"msg\": \"Failed to set permissions on the temporary files Ansible needs to create when becoming an unprivileged user (rc: 1, err: chmod: invalid mode: ‘A+user:johnd:rx:allow’\\nTry 'chmod --help' for more information.\\n}). For information on working around this, see https://docs.ansible.com/ansible-core/2.14/playbook_guide/playbooks_privilege_escalation.html#risks-of-becoming-an-unprivileged-user#risks-of-becoming-an-unprivileged-user\"\n}\n\nPLAY RECAP ********************************************************************************************************************************************************************************************************\nlocalhost                  : ok=12   changed=1    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0\n```"
+          }
+        },
+        "timestamp": "2026-04-12T17:28:52.988428431+09:00",
+        "images": null
+      },
+      "assistant": {
+        "ToolUse": {
+          "message_id": "52212e0c-3c25-443a-94ee-983eaeda1f2c",
+          "content": "\n\nこれは `become_user` で非特権ユーザー(johnd)に切り替える際に、一時ファイルのパーミッション設定が失敗しているエラーです。Ansibleが `setfacl`, `chown`, `chmod +a`, `chmod A+` と順に試してすべて失敗しています。\n\nまず、該当タスクとansible.cfgの内容を確認します。",
+          "tool_uses": [
+            {
+              "id": "tooluse_wzg2SAjn9MSPPjr7TDFyTp",
+              "name": "fs_read",
+              "orig_name": "fs_read",
+              "args": {
+                "operations": [
+                  {
+                    "mode": "Line",
+                    "path": "/home/nka700/work/suckless/ansible-debian-dwm-setup/roles/fonts/tasks/main.yml"
+                  },
+                  {
+                    "mode": "Line",
+                    "path": "/home/nka700/work/suckless/ansible-debian-dwm-setup/ansible.cfg"
+                  },
+                  {
+                    "mode": "Line",
+                    "path": "/home/nka700/work/suckless/ansible-debian-dwm-setup/group_vars/all.yml"
+                  }
+                ]
+              },
+              "orig_args": {
+                "operations": [
+                  {
+                    "mode": "Line",
+                    "path": "/home/nka700/work/suckless/ansible-debian-dwm-setup/roles/fonts/tasks/main.yml"
+                  },
+                  {
+                    "mode": "Line",
+                    "path": "/home/nka700/work/suckless/ansible-debian-dwm-setup/ansible.cfg"
+                  },
+                  {
+                    "mode": "Line",
+                    "path": "/home/nka700/work/suckless/ansible-debian-dwm-setup/group_vars/all.yml"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      "request_metadata": {
+        "request_id": "08847c8b-8572-4cbb-b8de-40e27fe82d00",
+        "context_usage_percentage": 2.6449,
+        "message_id": "52212e0c-3c25-443a-94ee-983eaeda1f2c",
+        "request_start_timestamp_ms": 1775982532989,
+        "stream_end_timestamp_ms": 1775982539963,
+        "time_to_first_chunk": {
+          "secs": 2,
+          "nanos": 982217385
+        },
+        "time_between_chunks": [
+          {
+            "secs": 0,
+            "nanos": 27783
+          },
+          {
+            "secs": 0,
+            "nanos": 17003
+          },
+          {
+            "secs": 0,
+            "nanos": 23371
+          },
+          {
+            "secs": 0,
+            "nanos": 12932113
+          },
+          {
+            "secs": 0,
+            "nanos": 51750460
+          },
+          {
+            "secs": 0,
+            "nanos": 53080069
+          },
+          {
+            "secs": 0,
+            "nanos": 47493043
+          },
+          {
+            "secs": 0,
+            "nanos": 56106005
+          },
+          {
+            "secs": 0,
+            "nanos": 50029993
+          },
+          {
+            "secs": 0,
+            "nanos": 136281358
+          },
+          {
+            "secs": 0,
+            "nanos": 20637345
+          },
+          {
+            "secs": 0,
+            "nanos": 52129195
+          },
+          {
+            "secs": 0,
+            "nanos": 51806526
+          },
+          {
+            "secs": 0,
+            "nanos": 52730371
+          },
+          {
+            "secs": 0,
+            "nanos": 60323663
+          },
+          {
+            "secs": 0,
+            "nanos": 44455579
+          },
+          {
+            "secs": 0,
+            "nanos": 51725484
+          },
+          {
+            "secs": 0,
+            "nanos": 68442873
+          },
+          {
+            "secs": 0,
+            "nanos": 42155052
+          },
+          {
+            "secs": 0,
+            "nanos": 272935708
+          },
+          {
+            "secs": 0,
+            "nanos": 17308
+          },
+          {
+            "secs": 0,
+            "nanos": 8304
+          },
+          {
+            "secs": 0,
+            "nanos": 7136
+          },
+          {
+            "secs": 0,
+            "nanos": 41252779
+          },
+          {
+            "secs": 0,
+            "nanos": 52061001
+          },
+          {
+            "secs": 0,
+            "nanos": 52784015
+          },
+          {
+            "secs": 0,
+            "nanos": 52265825
+          },
+          {
+            "secs": 0,
+            "nanos": 52910613
+          },
+          {
+            "secs": 0,
+            "nanos": 53041658
+          },
+          {
+            "secs": 0,
+            "nanos": 50751650
+          },
+          {
+            "secs": 0,
+            "nanos": 52318281
+          },
+          {
+            "secs": 0,
+            "nanos": 51585758
+          },
+          {
+            "secs": 0,
+            "nanos": 51451523
+          },
+          {
+            "secs": 0,
+            "nanos": 51692087
+          },
+          {
+            "secs": 0,
+            "nanos": 50883627
+          },
+          {
+            "secs": 0,
+            "nanos": 51066642
+          },
+          {
+            "secs": 0,
+            "nanos": 51044929
+          },
+          {
+            "secs": 0,
+            "nanos": 49804087
+          },
+          {
+            "secs": 0,
+            "nanos": 51205723
+          },
+          {
+            "secs": 0,
+            "nanos": 65025172
+          },
+          {
+            "secs": 0,
+            "nanos": 35587924
+          },
+          {
+            "secs": 0,
+            "nanos": 52845818
+          },
+          {
+            "secs": 0,
+            "nanos": 48695351
+          },
+          {
+            "secs": 0,
+            "nanos": 50400479
+          },
+          {
+            "secs": 0,
+            "nanos": 50596662
+          },
+          {
+            "secs": 0,
+            "nanos": 211119881
+          },
+          {
+            "secs": 0,
+            "nanos": 15005
+          },
+          {
+            "secs": 0,
+            "nanos": 9617253
+          },
+          {
+            "secs": 0,
+            "nanos": 194528805
+          },
+          {
+            "secs": 0,
+            "nanos": 19716
+          },
+          {
+            "secs": 1,
+            "nanos": 127397917
+          },
+          {
+            "secs": 0,
+            "nanos": 25663
+          },
+          {
+            "secs": 0,
+            "nanos": 10539
+          },
+          {
+            "secs": 0,
+            "nanos": 8220
+          },
+          {
+            "secs": 0,
+            "nanos": 8699
+          },
+          {
+            "secs": 0,
+            "nanos": 7270
+          },
+          {
+            "secs": 0,
+            "nanos": 8823
+          },
+          {
+            "secs": 0,
+            "nanos": 10823
+          },
+          {
+            "secs": 0,
+            "nanos": 10892
+          },
+          {
+            "secs": 0,
+            "nanos": 11248
+          },
+          {
+            "secs": 0,
+            "nanos": 11268
+          },
+          {
+            "secs": 0,
+            "nanos": 11433
+          },
+          {
+            "secs": 0,
+            "nanos": 55874
+          },
+          {
+            "secs": 0,
+            "nanos": 11970
+          },
+          {
+            "secs": 0,
+            "nanos": 8036
+          },
+          {
+            "secs": 0,
+            "nanos": 10770
+          },
+          {
+            "secs": 0,
+            "nanos": 57281
+          },
+          {
+            "secs": 0,
+            "nanos": 11206
+          },
+          {
+            "secs": 0,
+            "nanos": 203477094
+          },
+          {
+            "secs": 0,
+            "nanos": 28545
+          },
+          {
+            "secs": 0,
+            "nanos": 11016
+          },
+          {
+            "secs": 0,
+            "nanos": 9233
+          },
+          {
+            "secs": 0,
+            "nanos": 9079
+          },
+          {
+            "secs": 0,
+            "nanos": 8891
+          },
+          {
+            "secs": 0,
+            "nanos": 8261
+          },
+          {
+            "secs": 0,
+            "nanos": 9157
+          },
+          {
+            "secs": 0,
+            "nanos": 9271
+          },
+          {
+            "secs": 0,
+            "nanos": 8863
+          },
+          {
+            "secs": 0,
+            "nanos": 8557
+          },
+          {
+            "secs": 0,
+            "nanos": 21354
+          },
+          {
+            "secs": 0,
+            "nanos": 62143
+          },
+          {
+            "secs": 0,
+            "nanos": 13971
+          },
+          {
+            "secs": 0,
+            "nanos": 10526
+          },
+          {
+            "secs": 0,
+            "nanos": 8574
+          },
+          {
+            "secs": 0,
+            "nanos": 8785
+          },
+          {
+            "secs": 0,
+            "nanos": 8600
+          },
+          {
+            "secs": 0,
+            "nanos": 58457
+          },
+          {
+            "secs": 0,
+            "nanos": 53490
+          },
+          {
+            "secs": 0,
+            "nanos": 11285
+          },
+          {
+            "secs": 0,
+            "nanos": 10046
+          },
+          {
+            "secs": 0,
+            "nanos": 52208
+          },
+          {
+            "secs": 0,
+            "nanos": 25725
+          },
+          {
+            "secs": 0,
+            "nanos": 3556
+          }
+        ],
+        "user_prompt_length": 3143,
+        "response_size": 652,
+        "chat_conversation_type": "ToolUse",
+        "tool_use_ids_and_names": [
+          [
+            "tooluse_wzg2SAjn9MSPPjr7TDFyTp",
+            "fs_read"
+          ]
+        ],
+        "model_id": "auto",
+        "message_meta_tags": []
+      }
+    },
+    {
+      "user": {
+        "additional_context": "",
+        "env_context": {
+          "env_state": {
+            "operating_system": "linux",
+            "current_working_directory": "/home/nka700/work/suckless",
+            "environment_variables": []
+          }
+        },
+        "content": {
+          "ToolUseResults": {
+            "tool_use_results": [
+              {
+                "tool_use_id": "tooluse_wzg2SAjn9MSPPjr7TDFyTp",
+                "content": [
+                  {
+                    "Text": "=== Operation 1 Result (Text) ===\n- name: Ensure user fonts directory\n  file:\n    path: \"{{ home_dir }}/.local/share/fonts\"\n    state: directory\n    mode: '0755'\n    owner: \"{{ username }}\"\n    group: \"{{ username }}\"\n  become: yes\n  become_user: \"{{ username }}\"\n\n- name: Download NerdFont zip\n  get_url:\n    url: \"{{ nerd_font.url }}\"\n    dest: \"{{ home_dir }}/.local/share/fonts/NerdFont.zip\"\n    mode: '0644'\n    owner: \"{{ username }}\"\n    group: \"{{ username }}\"\n  become: yes\n  become_user: \"{{ username }}\"\n\n- name: Unarchive NerdFont\n  unarchive:\n    src: \"{{ home_dir }}/.local/share/fonts/NerdFont.zip\"\n    dest: \"{{ home_dir }}/.local/share/fonts\"\n    remote_src: yes\n    owner: \"{{ username }}\"\n    group: \"{{ username }}\"\n  become: yes\n  become_user: \"{{ username }}\"\n\n- name: Refresh font cache\n  command: fc-cache -fv\n\n- name: Remove zip file\n  file:\n    path: \"{{ home_dir }}/.local/share/fonts/NerdFont.zip\"\n    state: absent\n  become: yes\n  become_user: \"{{ username }}\"\n\n\n=== Operation 2 Result (Text) ===\n[defaults]\n#library = ./library/ansible-aur\ninventory      = ./hosts\n#vault_password_file =\n\n[ssh_connection]\nssh_args = -o ControlMaster=auto -o ControlPersist=60s -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null\n#private_key_file = ~/.ssh/id_rsa\n\n\n=== Operation 3 Result (Text) ===\n### Playbook Configuration Variables\n\n## User info\n#username: \n\n## zplug info\nzplug:\n  git_url: https://github.com/zplug/zplug\n  install_dir: ~/.zplug\n\n## Task Configuration\nsetup_zsh: True\n\n## Dotfiles\n## Please make sure to update \npull_dotfiles: True\nhome_dir: \"/home/{{ username }}\"\n\ndotfiles:\n    url: https://github.com/Nka700/.dotfiles.git\n    version: archdwmt490\n    destination: ~/.dotfiles\n\n## Desktop\ninstall_dwm: True\n\n## dwm \npull_suckless: True\n\nsuckless:\n    url: https://github.com/Nka700/suckless.git\n    version: archt490\n\n## tlp vars\nconfigure_tlp: True\n\n## nerd_font\nnerd_font:\n  url: https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.2/JetBrainsMono.zip\n"
+                  }
+                ],
+                "status": "Success"
+              }
+            ]
+          }
+        },
+        "timestamp": null,
+        "images": null
+      },
+      "assistant": {
+        "Response": {
+          "message_id": "188aa164-ab93-4f5d-b6f0-1a2e60afaf11",
+          "content": "原因がわかりました。各タスクで `become: yes` + `become_user: \"{{ username }}\"` を使っていますが、`connection: local` で実行しているため、Ansibleが一時ファイルのパーミッションをターゲットユーザーに渡す際に失敗しています。\n\n`setfacl` が最初に試されて失敗しているので、`acl` パッケージがインストールされていないのが直接的な原因です。\n\n対処法は2つあります:\n\n**方法1: acl パッケージをインストールする（推奨）**\n\n```bash\nsudo apt install acl\n```\n\nこれで `setfacl` が使えるようになり、Ansibleが一時ファイルのパーミッションを正しく設定できます。\n\n**方法2: ansible.cfgで `pipelining` を有効にする**\n\n`ansible.cfg` に以下を追加すると、一時ファイルの受け渡し自体をスキップできます:\n\n```ini\n[connection]\npipelining = True\n```\n\n---\n\n方法1が最もシンプルで確実です。`sudo apt install acl` を実行してから再度Playbookを実行してみてください。"
+        }
+      },
+      "request_metadata": {
+        "request_id": "50448675-4791-46c1-9bfe-42545827e144",
+        "context_usage_percentage": 2.7532,
+        "message_id": "188aa164-ab93-4f5d-b6f0-1a2e60afaf11",
+        "request_start_timestamp_ms": 1775982540028,
+        "stream_end_timestamp_ms": 1775982547746,
+        "time_to_first_chunk": {
+          "secs": 2,
+          "nanos": 700592085
+        },
+        "time_between_chunks": [
+          {
+            "secs": 0,
+            "nanos": 30299
+          },
+          {
+            "secs": 0,
+            "nanos": 14758
+          },
+          {
+            "secs": 0,
+            "nanos": 10427
+          },
+          {
+            "secs": 0,
+            "nanos": 7692
+          },
+          {
+            "secs": 0,
+            "nanos": 2169760
+          },
+          {
+            "secs": 0,
+            "nanos": 51341430
+          },
+          {
+            "secs": 0,
+            "nanos": 51675542
+          },
+          {
+            "secs": 0,
+            "nanos": 52740362
+          },
+          {
+            "secs": 0,
+            "nanos": 52999888
+          },
+          {
+            "secs": 0,
+            "nanos": 51126530
+          },
+          {
+            "secs": 0,
+            "nanos": 51912362
+          },
+          {
+            "secs": 0,
+            "nanos": 51755975
+          },
+          {
+            "secs": 0,
+            "nanos": 51193754
+          },
+          {
+            "secs": 0,
+            "nanos": 54315952
+          },
+          {
+            "secs": 0,
+            "nanos": 72183743
+          },
+          {
+            "secs": 0,
+            "nanos": 28287096
+          },
+          {
+            "secs": 0,
+            "nanos": 50923287
+          },
+          {
+            "secs": 0,
+            "nanos": 53249170
+          },
+          {
+            "secs": 0,
+            "nanos": 52174375
+          },
+          {
+            "secs": 0,
+            "nanos": 50390605
+          },
+          {
+            "secs": 0,
+            "nanos": 52433507
+          },
+          {
+            "secs": 0,
+            "nanos": 50782589
+          },
+          {
+            "secs": 0,
+            "nanos": 51579579
+          },
+          {
+            "secs": 0,
+            "nanos": 56756175
+          },
+          {
+            "secs": 0,
+            "nanos": 45581293
+          },
+          {
+            "secs": 0,
+            "nanos": 50375915
+          },
+          {
+            "secs": 0,
+            "nanos": 52453607
+          },
+          {
+            "secs": 0,
+            "nanos": 53783513
+          },
+          {
+            "secs": 0,
+            "nanos": 51922651
+          },
+          {
+            "secs": 0,
+            "nanos": 50305754
+          },
+          {
+            "secs": 0,
+            "nanos": 56119757
+          },
+          {
+            "secs": 0,
+            "nanos": 47534518
+          },
+          {
+            "secs": 0,
+            "nanos": 51649010
+          },
+          {
+            "secs": 0,
+            "nanos": 51839601
+          },
+          {
+            "secs": 0,
+            "nanos": 50963793
+          },
+          {
+            "secs": 0,
+            "nanos": 52084699
+          },
+          {
+            "secs": 0,
+            "nanos": 77020501
+          },
+          {
+            "secs": 0,
+            "nanos": 27554015
+          },
+          {
+            "secs": 0,
+            "nanos": 52140085
+          },
+          {
+            "secs": 0,
+            "nanos": 51587989
+          },
+          {
+            "secs": 0,
+            "nanos": 51283817
+          },
+          {
+            "secs": 0,
+            "nanos": 53217702
+          },
+          {
+            "secs": 0,
+            "nanos": 50157297
+          },
+          {
+            "secs": 0,
+            "nanos": 50789470
+          },
+          {
+            "secs": 0,
+            "nanos": 51696946
+          },
+          {
+            "secs": 0,
+            "nanos": 56014508
+          },
+          {
+            "secs": 0,
+            "nanos": 51868378
+          },
+          {
+            "secs": 0,
+            "nanos": 48800562
+          },
+          {
+            "secs": 0,
+            "nanos": 53170453
+          },
+          {
+            "secs": 0,
+            "nanos": 52606925
+          },
+          {
+            "secs": 0,
+            "nanos": 50415205
+          },
+          {
+            "secs": 0,
+            "nanos": 53279378
+          },
+          {
+            "secs": 0,
+            "nanos": 50512156
+          },
+          {
+            "secs": 0,
+            "nanos": 50877247
+          },
+          {
+            "secs": 0,
+            "nanos": 51579724
+          },
+          {
+            "secs": 0,
+            "nanos": 52179014
+          },
+          {
+            "secs": 0,
+            "nanos": 50929414
+          },
+          {
+            "secs": 0,
+            "nanos": 52428400
+          },
+          {
+            "secs": 0,
+            "nanos": 51934636
+          },
+          {
+            "secs": 0,
+            "nanos": 51662565
+          },
+          {
+            "secs": 0,
+            "nanos": 77860386
+          },
+          {
+            "secs": 0,
+            "nanos": 86032104
+          },
+          {
+            "secs": 0,
+            "nanos": 62972862
+          },
+          {
+            "secs": 0,
+            "nanos": 51869225
+          },
+          {
+            "secs": 0,
+            "nanos": 51084863
+          },
+          {
+            "secs": 0,
+            "nanos": 52271712
+          },
+          {
+            "secs": 0,
+            "nanos": 51847422
+          },
+          {
+            "secs": 0,
+            "nanos": 51591445
+          },
+          {
+            "secs": 0,
+            "nanos": 51526358
+          },
+          {
+            "secs": 0,
+            "nanos": 56548261
+          },
+          {
+            "secs": 0,
+            "nanos": 45698501
+          },
+          {
+            "secs": 0,
+            "nanos": 51326897
+          },
+          {
+            "secs": 0,
+            "nanos": 54605055
+          },
+          {
+            "secs": 0,
+            "nanos": 50720942
+          },
+          {
+            "secs": 0,
+            "nanos": 51651734
+          },
+          {
+            "secs": 0,
+            "nanos": 51439225
+          },
+          {
+            "secs": 0,
+            "nanos": 51749433
+          },
+          {
+            "secs": 0,
+            "nanos": 52912977
+          },
+          {
+            "secs": 0,
+            "nanos": 50031438
+          },
+          {
+            "secs": 0,
+            "nanos": 50906968
+          },
+          {
+            "secs": 0,
+            "nanos": 82199416
+          },
+          {
+            "secs": 0,
+            "nanos": 19988820
+          },
+          {
+            "secs": 0,
+            "nanos": 52553243
+          },
+          {
+            "secs": 0,
+            "nanos": 51060254
+          },
+          {
+            "secs": 0,
+            "nanos": 50497711
+          },
+          {
+            "secs": 0,
+            "nanos": 52439997
+          },
+          {
+            "secs": 0,
+            "nanos": 75005355
+          },
+          {
+            "secs": 0,
+            "nanos": 28694246
+          },
+          {
+            "secs": 0,
+            "nanos": 51686976
+          },
+          {
+            "secs": 0,
+            "nanos": 51899120
+          },
+          {
+            "secs": 0,
+            "nanos": 51778208
+          },
+          {
+            "secs": 0,
+            "nanos": 52928246
+          },
+          {
+            "secs": 0,
+            "nanos": 51197891
+          },
+          {
+            "secs": 0,
+            "nanos": 50475193
+          },
+          {
+            "secs": 0,
+            "nanos": 52178218
+          },
+          {
+            "secs": 0,
+            "nanos": 288044539
+          },
+          {
+            "secs": 0,
+            "nanos": 25147
+          },
+          {
+            "secs": 0,
+            "nanos": 18341
+          },
+          {
+            "secs": 0,
+            "nanos": 46596
+          }
+        ],
+        "user_prompt_length": 0,
+        "response_size": 1087,
+        "chat_conversation_type": "NotToolUse",
+        "tool_use_ids_and_names": [],
+        "model_id": "auto",
+        "message_meta_tags": []
+      }
+    },
+    {
+      "user": {
+        "additional_context": "",
+        "env_context": {
+          "env_state": {
+            "operating_system": "linux",
+            "current_working_directory": "/home/nka700/work/suckless",
+            "environment_variables": []
+          }
+        },
+        "content": {
+          "Prompt": {
+            "prompt": "aclって何をするためのツールか?"
+          }
+        },
+        "timestamp": "2026-04-12T17:32:34.875678193+09:00",
+        "images": null
+      },
+      "assistant": {
+        "Response": {
+          "message_id": "a70afc7b-f59c-4004-b16b-98c6e66e858b",
+          "content": "ACL (Access Control Lists) は、Linuxの標準的なファイルパーミッション（owner/group/other の rwx）を拡張するための仕組みです。\n\n標準パーミッションだと、あるファイルに対して「ownerとgroup以外の特定ユーザーだけに読み取り権限を与える」といったことができません。ACLを使うと、ファイルやディレクトリに対してユーザー単位・グループ単位で細かくアクセス権を設定できます。\n\n`acl` パッケージが提供する主なコマンド:\n\n- `setfacl` — ACLを設定する（例: `setfacl -m u:johnd:rx /tmp/somefile`）\n- `getfacl` — 現在のACLを確認する\n\n今回のAnsibleのケースでは、`ssm-user` が `become_user: johnd` で一時ファイルを実行させる際に、`setfacl -m u:johnd:r-x` で johnd にだけ読み取り・実行権限を付与しようとしていました。`acl` パッケージが無いと `setfacl` コマンドが存在せず、フォールバックの `chown` や `chmod +a`（macOS用）なども全部失敗して、あのエラーになっていたわけです。"
+        }
+      },
+      "request_metadata": {
+        "request_id": "8939e1de-7681-4440-8b92-9daa73d3a847",
+        "context_usage_percentage": 2.8027,
+        "message_id": "a70afc7b-f59c-4004-b16b-98c6e66e858b",
+        "request_start_timestamp_ms": 1775982754876,
+        "stream_end_timestamp_ms": 1775982773771,
+        "time_to_first_chunk": {
+          "secs": 2,
+          "nanos": 892422174
+        },
+        "time_between_chunks": [
+          {
+            "secs": 0,
+            "nanos": 31311
+          },
+          {
+            "secs": 0,
+            "nanos": 12765
+          },
+          {
+            "secs": 0,
+            "nanos": 6328537
+          },
+          {
+            "secs": 0,
+            "nanos": 54596576
+          },
+          {
+            "secs": 0,
+            "nanos": 52865526
+          },
+          {
+            "secs": 0,
+            "nanos": 54379266
+          },
+          {
+            "secs": 0,
+            "nanos": 53405598
+          },
+          {
+            "secs": 0,
+            "nanos": 51766663
+          },
+          {
+            "secs": 0,
+            "nanos": 52008234
+          },
+          {
+            "secs": 0,
+            "nanos": 53320708
+          },
+          {
+            "secs": 0,
+            "nanos": 52501534
+          },
+          {
+            "secs": 0,
+            "nanos": 58209815
+          },
+          {
+            "secs": 0,
+            "nanos": 47460231
+          },
+          {
+            "secs": 0,
+            "nanos": 54963310
+          },
+          {
+            "secs": 0,
+            "nanos": 50523364
+          },
+          {
+            "secs": 0,
+            "nanos": 51066712
+          },
+          {
+            "secs": 0,
+            "nanos": 58498040
+          },
+          {
+            "secs": 0,
+            "nanos": 48863537
+          },
+          {
+            "secs": 0,
+            "nanos": 51575863
+          },
+          {
+            "secs": 0,
+            "nanos": 52029805
+          },
+          {
+            "secs": 0,
+            "nanos": 52401390
+          },
+          {
+            "secs": 0,
+            "nanos": 53666551
+          },
+          {
+            "secs": 0,
+            "nanos": 55791501
+          },
+          {
+            "secs": 0,
+            "nanos": 161894552
+          },
+          {
+            "secs": 0,
+            "nanos": 17871
+          },
+          {
+            "secs": 0,
+            "nanos": 66705418
+          },
+          {
+            "secs": 0,
+            "nanos": 33277529
+          },
+          {
+            "secs": 0,
+            "nanos": 51818951
+          },
+          {
+            "secs": 0,
+            "nanos": 54048153
+          },
+          {
+            "secs": 0,
+            "nanos": 49405243
+          },
+          {
+            "secs": 0,
+            "nanos": 53952789
+          },
+          {
+            "secs": 0,
+            "nanos": 51302406
+          },
+          {
+            "secs": 0,
+            "nanos": 52982002
+          },
+          {
+            "secs": 0,
+            "nanos": 50587797
+          },
+          {
+            "secs": 0,
+            "nanos": 52883251
+          },
+          {
+            "secs": 0,
+            "nanos": 51158129
+          },
+          {
+            "secs": 0,
+            "nanos": 52824868
+          },
+          {
+            "secs": 0,
+            "nanos": 50891282
+          },
+          {
+            "secs": 0,
+            "nanos": 51788336
+          },
+          {
+            "secs": 0,
+            "nanos": 197676222
+          },
+          {
+            "secs": 0,
+            "nanos": 21778
+          },
+          {
+            "secs": 0,
+            "nanos": 11695140
+          },
+          {
+            "secs": 0,
+            "nanos": 52787660
+          },
+          {
+            "secs": 0,
+            "nanos": 52050684
+          },
+          {
+            "secs": 0,
+            "nanos": 58806260
+          },
+          {
+            "secs": 0,
+            "nanos": 44057747
+          },
+          {
+            "secs": 0,
+            "nanos": 56266535
+          },
+          {
+            "secs": 0,
+            "nanos": 52768577
+          },
+          {
+            "secs": 0,
+            "nanos": 52610855
+          },
+          {
+            "secs": 0,
+            "nanos": 53858723
+          },
+          {
+            "secs": 0,
+            "nanos": 78460680
+          },
+          {
+            "secs": 0,
+            "nanos": 27682477
+          },
+          {
+            "secs": 0,
+            "nanos": 55148669
+          },
+          {
+            "secs": 0,
+            "nanos": 51631248
+          },
+          {
+            "secs": 0,
+            "nanos": 51969398
+          },
+          {
+            "secs": 0,
+            "nanos": 52447829
+          },
+          {
+            "secs": 0,
+            "nanos": 52563231
+          },
+          {
+            "secs": 0,
+            "nanos": 56571908
+          },
+          {
+            "secs": 0,
+            "nanos": 59456339
+          },
+          {
+            "secs": 0,
+            "nanos": 205095412
+          },
+          {
+            "secs": 0,
+            "nanos": 18229
+          },
+          {
+            "secs": 0,
+            "nanos": 10755
+          },
+          {
+            "secs": 0,
+            "nanos": 8428972
+          },
+          {
+            "secs": 0,
+            "nanos": 52216542
+          },
+          {
+            "secs": 0,
+            "nanos": 54179728
+          },
+          {
+            "secs": 0,
+            "nanos": 51725299
+          },
+          {
+            "secs": 0,
+            "nanos": 53885099
+          },
+          {
+            "secs": 0,
+            "nanos": 51899736
+          },
+          {
+            "secs": 0,
+            "nanos": 52034537
+          },
+          {
+            "secs": 0,
+            "nanos": 145162924
+          },
+          {
+            "secs": 0,
+            "nanos": 100027006
+          },
+          {
+            "secs": 0,
+            "nanos": 47941523
+          },
+          {
+            "secs": 0,
+            "nanos": 42000053
+          },
+          {
+            "secs": 0,
+            "nanos": 48889810
+          },
+          {
+            "secs": 0,
+            "nanos": 50454955
+          },
+          {
+            "secs": 0,
+            "nanos": 53257425
+          },
+          {
+            "secs": 0,
+            "nanos": 56135505
+          },
+          {
+            "secs": 0,
+            "nanos": 52000217
+          },
+          {
+            "secs": 0,
+            "nanos": 49951079
+          },
+          {
+            "secs": 0,
+            "nanos": 96123041
+          },
+          {
+            "secs": 0,
+            "nanos": 36932919
+          },
+          {
+            "secs": 0,
+            "nanos": 26063150
+          },
+          {
+            "secs": 0,
+            "nanos": 47480727
+          },
+          {
+            "secs": 0,
+            "nanos": 55905760
+          },
+          {
+            "secs": 0,
+            "nanos": 51932491
+          },
+          {
+            "secs": 0,
+            "nanos": 55034634
+          },
+          {
+            "secs": 0,
+            "nanos": 49693262
+          },
+          {
+            "secs": 0,
+            "nanos": 52061882
+          },
+          {
+            "secs": 0,
+            "nanos": 51560154
+          },
+          {
+            "secs": 0,
+            "nanos": 52923174
+          },
+          {
+            "secs": 0,
+            "nanos": 50911187
+          },
+          {
+            "secs": 0,
+            "nanos": 51737914
+          },
+          {
+            "secs": 0,
+            "nanos": 194599557
+          },
+          {
+            "secs": 0,
+            "nanos": 17229
+          },
+          {
+            "secs": 0,
+            "nanos": 11865
+          },
+          {
+            "secs": 0,
+            "nanos": 14446674
+          },
+          {
+            "secs": 0,
+            "nanos": 50273610
+          },
+          {
+            "secs": 0,
+            "nanos": 52596660
+          },
+          {
+            "secs": 0,
+            "nanos": 54106362
+          },
+          {
+            "secs": 0,
+            "nanos": 52341589
+          },
+          {
+            "secs": 0,
+            "nanos": 53360066
+          },
+          {
+            "secs": 0,
+            "nanos": 52076442
+          },
+          {
+            "secs": 0,
+            "nanos": 65166014
+          },
+          {
+            "secs": 0,
+            "nanos": 37613920
+          },
+          {
+            "secs": 0,
+            "nanos": 54443305
+          },
+          {
+            "secs": 0,
+            "nanos": 50967718
+          },
+          {
+            "secs": 0,
+            "nanos": 113193958
+          },
+          {
+            "secs": 0,
+            "nanos": 8524
+          },
+          {
+            "secs": 0,
+            "nanos": 49773542
+          },
+          {
+            "secs": 0,
+            "nanos": 54810401
+          },
+          {
+            "secs": 0,
+            "nanos": 52509261
+          },
+          {
+            "secs": 0,
+            "nanos": 54997040
+          },
+          {
+            "secs": 0,
+            "nanos": 53357357
+          },
+          {
+            "secs": 0,
+            "nanos": 55487107
+          },
+          {
+            "secs": 0,
+            "nanos": 56593348
+          },
+          {
+            "secs": 9,
+            "nanos": 522602832
+          },
+          {
+            "secs": 0,
+            "nanos": 9722
+          },
+          {
+            "secs": 0,
+            "nanos": 7967
+          },
+          {
+            "secs": 0,
+            "nanos": 11818
+          },
+          {
+            "secs": 0,
+            "nanos": 8267
+          },
+          {
+            "secs": 0,
+            "nanos": 7911
+          },
+          {
+            "secs": 0,
+            "nanos": 31890
+          },
+          {
+            "secs": 0,
+            "nanos": 15729
+          },
+          {
+            "secs": 0,
+            "nanos": 12377
+          },
+          {
+            "secs": 0,
+            "nanos": 11733
+          },
+          {
+            "secs": 0,
+            "nanos": 141555
+          },
+          {
+            "secs": 0,
+            "nanos": 21736
+          },
+          {
+            "secs": 0,
+            "nanos": 9226
+          },
+          {
+            "secs": 0,
+            "nanos": 10535
+          },
+          {
+            "secs": 0,
+            "nanos": 48301
+          },
+          {
+            "secs": 0,
+            "nanos": 20597
+          },
+          {
+            "secs": 0,
+            "nanos": 7752
+          },
+          {
+            "secs": 0,
+            "nanos": 9520
+          },
+          {
+            "secs": 0,
+            "nanos": 42142
+          },
+          {
+            "secs": 0,
+            "nanos": 35736
+          },
+          {
+            "secs": 0,
+            "nanos": 74222581
+          },
+          {
+            "secs": 0,
+            "nanos": 16608
+          },
+          {
+            "secs": 0,
+            "nanos": 8305
+          },
+          {
+            "secs": 0,
+            "nanos": 36329
+          },
+          {
+            "secs": 0,
+            "nanos": 34273
+          },
+          {
+            "secs": 0,
+            "nanos": 34372
+          },
+          {
+            "secs": 0,
+            "nanos": 35201
+          },
+          {
+            "secs": 0,
+            "nanos": 37723
+          },
+          {
+            "secs": 0,
+            "nanos": 28370
+          },
+          {
+            "secs": 0,
+            "nanos": 12596
+          }
+        ],
+        "user_prompt_length": 201,
+        "response_size": 1138,
+        "chat_conversation_type": "NotToolUse",
+        "tool_use_ids_and_names": [],
+        "model_id": "auto",
+        "message_meta_tags": []
+      }
+    }
+  ],
+  "valid_history_range": [
+    0,
+    4
+  ],
+  "transcript": [
+    "> `./ansible-debian-dwm-setup`配下にansible-playbookのコードが入っていることは認識できるか?",
+    "\n\n確認してみます。\n[Tool uses: fs_read]",
+    "はい、認識できます。`./ansible-debian-dwm-setup` 配下はAnsible Playbookのプロジェクトで、以下の構成になっています:\n\n- `main.yml` — メインのPlaybook\n- `ansible.cfg` — Ansible設定ファイル\n- `group_vars/all.yml` — グループ変数\n- `roles/` — 10個のロール:\n  - `group`, `user`, `authorized_keys` — ユーザー/グループ管理\n  - `sshd` — SSH設定\n  - `core-apps` — 基本パッケージ\n  - `suckless` — suckless系ツール(dwm等)のビルド・セットアップ\n  - `fonts` — フォント\n  - `dotfiles` — dotfiles配置\n  - `zsh` — zsh設定\n  - `power-management` — 電源管理\n\nDebian環境にdwmベースのデスクトップ環境を構築するためのPlaybookですね。何か操作しますか?\n[Tool uses: none]",
+    "> ansibleを実行したところ、以下のエラーが出る ```TASK [fonts : Ensure user fonts directory] ************************************************************************************************************************************************************************> \ntask path: /home/ssm-user/suckless/ansible-debian-dwm-setup/roles/fonts/tasks/main.yml:1> \n<localhost> ESTABLISH LOCAL CONNECTION FOR USER: ssm-user> \n<localhost> EXEC /bin/sh -c 'echo ~ssm-user && sleep 0'> \n<localhost> EXEC /bin/sh -c '( umask 77 && mkdir -p \"` echo /var/tmp `\"&& mkdir \"` echo /var/tmp/ansible-tmp-1775982163.9649205-28861-18331849849081 `\" && echo ansible-tmp-1775982163.9649205-28861-18331849849081=\"` echo /var/tmp/ansible-tmp-1775982163.9649205-28861-18331849849081 `\" ) && sleep 0'> \nUsing module file /usr/lib/python3/dist-packages/ansible/modules/file.py> \n<localhost> PUT /home/ssm-user/.ansible/tmp/ansible-local-28056u5trrmis/tmpnwxvbo99 TO /var/tmp/ansible-tmp-1775982163.9649205-28861-18331849849081/AnsiballZ_file.py> \n<localhost> EXEC /bin/sh -c 'setfacl -m u:johnd:r-x /var/tmp/ansible-tmp-1775982163.9649205-28861-18331849849081/ /var/tmp/ansible-tmp-1775982163.9649205-28861-18331849849081/AnsiballZ_file.py && sleep 0'> \n<localhost> EXEC /bin/sh -c 'chmod u+x /var/tmp/ansible-tmp-1775982163.9649205-28861-18331849849081/ /var/tmp/ansible-tmp-1775982163.9649205-28861-18331849849081/AnsiballZ_file.py && sleep 0'> \n<localhost> EXEC /bin/sh -c 'chown johnd /var/tmp/ansible-tmp-1775982163.9649205-28861-18331849849081/ /var/tmp/ansible-tmp-1775982163.9649205-28861-18331849849081/AnsiballZ_file.py && sleep 0'> \n<localhost> EXEC /bin/sh -c 'chmod +a '\"'\"'johnd allow read,execute'\"'\"' /var/tmp/ansible-tmp-1775982163.9649205-28861-18331849849081/ /var/tmp/ansible-tmp-1775982163.9649205-28861-18331849849081/AnsiballZ_file.py && sleep 0'> \n<localhost> EXEC /bin/sh -c 'chmod A+user:johnd:rx:allow /var/tmp/ansible-tmp-1775982163.9649205-28861-18331849849081/ /var/tmp/ansible-tmp-1775982163.9649205-28861-18331849849081/AnsiballZ_file.py && sleep 0'> \n<localhost> EXEC /bin/sh -c 'rm -f -r /var/tmp/ansible-tmp-1775982163.9649205-28861-18331849849081/ > /dev/null 2>&1 && sleep 0'> \nfatal: [localhost]: FAILED! => {> \n    \"msg\": \"Failed to set permissions on the temporary files Ansible needs to create when becoming an unprivileged user (rc: 1, err: chmod: invalid mode: ‘A+user:johnd:rx:allow’\\nTry 'chmod --help' for more information.\\n}). For information on working around this, see https://docs.ansible.com/ansible-core/2.14/playbook_guide/playbooks_privilege_escalation.html#risks-of-becoming-an-unprivileged-user#risks-of-becoming-an-unprivileged-user\"> \n}> \n> \nPLAY RECAP ********************************************************************************************************************************************************************************************************> \nlocalhost                  : ok=12   changed=1    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0> \n```",
+    "\n\nこれは `become_user` で非特権ユーザー(johnd)に切り替える際に、一時ファイルのパーミッション設定が失敗しているエラーです。Ansibleが `setfacl`, `chown`, `chmod +a`, `chmod A+` と順に試してすべて失敗しています。\n\nまず、該当タスクとansible.cfgの内容を確認します。\n[Tool uses: fs_read]",
+    "原因がわかりました。各タスクで `become: yes` + `become_user: \"{{ username }}\"` を使っていますが、`connection: local` で実行しているため、Ansibleが一時ファイルのパーミッションをターゲットユーザーに渡す際に失敗しています。\n\n`setfacl` が最初に試されて失敗しているので、`acl` パッケージがインストールされていないのが直接的な原因です。\n\n対処法は2つあります:\n\n**方法1: acl パッケージをインストールする（推奨）**\n\n```bash\nsudo apt install acl\n```\n\nこれで `setfacl` が使えるようになり、Ansibleが一時ファイルのパーミッションを正しく設定できます。\n\n**方法2: ansible.cfgで `pipelining` を有効にする**\n\n`ansible.cfg` に以下を追加すると、一時ファイルの受け渡し自体をスキップできます:\n\n```ini\n[connection]\npipelining = True\n```\n\n---\n\n方法1が最もシンプルで確実です。`sudo apt install acl` を実行してから再度Playbookを実行してみてください。\n[Tool uses: none]",
+    "> aclって何をするためのツールか?",
+    "ACL (Access Control Lists) は、Linuxの標準的なファイルパーミッション（owner/group/other の rwx）を拡張するための仕組みです。\n\n標準パーミッションだと、あるファイルに対して「ownerとgroup以外の特定ユーザーだけに読み取り権限を与える」といったことができません。ACLを使うと、ファイルやディレクトリに対してユーザー単位・グループ単位で細かくアクセス権を設定できます。\n\n`acl` パッケージが提供する主なコマンド:\n\n- `setfacl` — ACLを設定する（例: `setfacl -m u:johnd:rx /tmp/somefile`）\n- `getfacl` — 現在のACLを確認する\n\n今回のAnsibleのケースでは、`ssm-user` が `become_user: johnd` で一時ファイルを実行させる際に、`setfacl -m u:johnd:r-x` で johnd にだけ読み取り・実行権限を付与しようとしていました。`acl` パッケージが無いと `setfacl` コマンドが存在せず、フォールバックの `chown` や `chmod +a`（macOS用）なども全部失敗して、あのエラーになっていたわけです。\n[Tool uses: none]",
+    "> /context show",
+    "> /usage",
+    "> /prompts",
+    "> /chat save kiro-cli/2026_0417_2204.json"
+  ],
+  "tools": {
+    "aws-knowledge-mcp-server": [
+      {
+        "ToolSpecification": {
+          "name": "aws___list_regions",
+          "description": "Retrieve a list of all AWS regions.\n\n## Usage\nThis tool provides information about all AWS regions, including their identifiers and names.\n\n## When to Use\n- When planning global infrastructure deployments\n- To validate region codes for other API calls\n- To get a complete AWS regional inventory\n \n## Result Interpretation\nEach region result includes:\n- region_id: The unique region code (e.g., 'us-east-1') \n- region_long_name: The human-friendly name (e.g., 'US East (N. Virginia)')\n \n## Common Use Cases\n1. Infrastructure Planning: Review available regions for global deployment\n2. Region Validation: Verify region codes before using in other operations\n3. Regional Inventory: Get a complete list of AWS's global infrastructure",
+          "input_schema": {
+            "json": {
+              "properties": {},
+              "type": "object"
+            }
+          }
+        }
+      },
+      {
+        "ToolSpecification": {
+          "name": "aws___get_regional_availability",
+          "description": "Check AWS resource availability across regions for products (service and features), APIs, and CloudFormation resources.\n\n## Quick Reference\n- Maximum 10 regions per call (split into multiple calls for more regions)\n- Single region: filters optional, supports pagination\n- Multiple regions: filters required, no pagination, queries run concurrently\n- Status values: 'isAvailableIn' | 'isNotAvailableIn' | 'isPlannedIn' | 'Not Found'\n- Response field: 'products' (product), 'service_apis' (api), 'cfn_resources' (cfn)\n\n## When to Use\n1. Pre-deployment Validation\n    - Verify resource availability before deployment\n    - Prevent deployment failures due to regional restrictions\n    - Validate multi-region architecture requirements\n\n2. Architecture Planning\n    - Design region-specific solutions\n    - Plan multi-region deployments\n    - Compare regional capabilities\n\n## Examples\n\n**Check specific resources in one region**:\n```\nregions=[\"us-east-1\"], resource_type=\"product\", filters=[\"AWS Lambda\"]\nregions=[\"us-east-1\"], resource_type=\"api\", filters=[\"Lambda+Invoke\", \"S3+GetObject\"]\nregions=[\"us-east-1\"], resource_type=\"cfn\", filters=[\"AWS::Lambda::Function\"]\n```\n\n**Compare availability across regions**:\n```\nregions=[\"us-east-1\", \"eu-west-1\"], resource_type=\"product\", filters=[\"AWS Lambda\"]\n```\n\n**Explore all resources** (single region only, with pagination handling support via next_token due to large output):\n```\nregions=[\"us-east-1\"], resource_type=\"product\"\n```\nFollow up with next_token from response to get more results.\n\n## Response Format\n\n**Single Region**: Flat structure with optional next_token. Example:\n```\n{\"products\": {\"AWS Lambda\": \"isAvailableIn\"}, \"next_token\": null, \"failed_regions\": null}\n```\n\n**Multiple Regions**: Nested by region. Example:\n```\n{\"products\": {\"AWS Lambda\": {\"us-east-1\": \"isAvailableIn\", \"eu-west-2\": \"isAvailableIn\"}}, ...}\n```\n\n## Filter Guidelines\nThe filters must be passed as an array of values and must follow the format below.\n1. Product - service and feature (resource_type='product')\n    Format: 'Product'\n    Example filters:\n    - ['Latency-Based Routing', 'AWS Amplify', 'AWS Application Auto Scaling']\n    - ['PrivateLink Support', 'Amazon Aurora']\n2. APIs (resource_type='api')\n    Format: to filter on API level 'SdkServiceId+APIOperation'\n    Example filters:\n    - ['Athena+UpdateNamedQuery', 'ACM PCA+CreateCertificateAuthority', 'IAM+GetSSHPublicKey']\n    Format: to filter on SdkService level 'SdkServiceId'\n    Example filters:\n    - ['EC2', 'ACM PCA']\n3. CloudFormation (resource_type='cfn')\n    Format: 'CloudformationResourceType'\n    Example filters:\n    - ['AWS::EC2::Instance', 'AWS::Lambda::Function', 'AWS::Logs::LogGroup']",
+          "input_schema": {
+            "json": {
+              "type": "object",
+              "properties": {
+                "resource_type": {
+                  "type": "string",
+                  "description": "Type of AWS resource: 'product' (AWS services/features), 'api' (SDK/API operations), or 'cfn' (CloudFormation resource types)."
+                },
+                "filters": {
+                  "items": {
+                    "type": "string"
+                  },
+                  "type": "array",
+                  "description": "Optional list of one or multiple specific resources to check. Format depends on resource_type:\n- Products: ['AWS Lambda', 'Amazon S3']\n- APIs: ['IAM+GetSSHPublicKey', 'EC2']\n- CloudFormation: ['AWS::EC2::Instance']\nMust follow the format specified in the tool description."
+                },
+                "next_token": {
+                  "type": "string",
+                  "description": "Pagination token from previous response for retrieving additional results. Only valid for single region queries and no filters."
+                },
+                "regions": {
+                  "description": "One or more AWS region codes (e.g., us-east-1, eu-west-1). Maximum 10 regions per call. Single region supports pagination. Multiple regions require filters.",
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "region": {
+                  "description": "Target AWS region code (e.g., us-east-1, eu-west-1, ap-southeast-2).",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "resource_type"
+              ]
+            }
+          }
+        }
+      },
+      {
+        "ToolSpecification": {
+          "name": "aws___read_documentation",
+          "description": "Fetch and convert AWS related documentation pages to markdown format.\n\n## Usage\n\nThis tool reads documentation pages concurrently and converts them to markdown format.\nSupports AWS documentation, AWS Amplify docs, AWS GitHub repositories and CDK construct documentation.\nWhen content is truncated, a Table of Contents (TOC) with character positions is included to help navigate large documents.\n\n## Best Practices\n\n- Batch 2-5 requests when reading multiple pages or jumping to different sections of the same document\n- Use single request for initial TOC fetch (small max_length) or when evaluating content before deciding next steps\n- Use TOC character positions to jump directly to relevant sections\n- Stop early once you find the needed information\n\n## Request Format\n\nEach request must be an object with:\n- `url`: The documentation URL to fetch (required)\n- `max_length`: Maximum characters to return (optional, default: 10000 characters)\n- `start_index`: Starting character position (optional, default: 0)\n\nFor batching you can input a list of requests.\n\n## Example Request\n\n ```\n{\n  \"requests\":\n  [\n      {\n          \"url\": \"https://docs.aws.amazon.com/AmazonS3/latest/userguide/access-management.html\",\n          \"max_length\": 5000,\n          \"start_index\": 0\n      },\n      {\n          \"url\": \"https://repost.aws/knowledge-center/ec2-instance-connection-troubleshooting\"\n      }\n  ]\n}\n```\n\n\n## URL Requirements\n\nAllow-listed URL prefixes:\n- docs.aws.amazon.com\n- aws.amazon.com\n- repost.aws/knowledge-center\n- docs.amplify.aws\n- ui.docs.amplify.aws\n- github.com/aws-cloudformation/aws-cloudformation-templates\n- github.com/aws-samples/aws-cdk-examples\n- github.com/aws-samples/generative-ai-cdk-constructs-samples\n- github.com/aws-samples/serverless-patterns\n- github.com/awsdocs/aws-cdk-guide\n- github.com/awslabs/aws-solutions-constructs\n- github.com/cdklabs/cdk-nag\n- constructs.dev/packages/@aws-cdk-containers\n- constructs.dev/packages/@aws-cdk\n- constructs.dev/packages/@cdk-cloudformation\n- constructs.dev/packages/aws-analytics-reference-architecture\n- constructs.dev/packages/aws-cdk-lib\n- constructs.dev/packages/cdk-amazon-chime-resources\n- constructs.dev/packages/cdk-aws-lambda-powertools-layer\n- constructs.dev/packages/cdk-ecr-deployment\n- constructs.dev/packages/cdk-lambda-powertools-python-layer\n- constructs.dev/packages/cdk-serverless-clamscan\n- constructs.dev/packages/cdk8s\n- constructs.dev/packages/cdk8s-plus-33\n\nDeny-listed URL prefixes:\n- aws.amazon.com/marketplace\n\n## Example URLs\n\n- https://docs.aws.amazon.com/AmazonS3/latest/userguide/bucketnamingrules.html\n- https://docs.aws.amazon.com/lambda/latest/dg/lambda-invocation.html\n- https://aws.amazon.com/about-aws/whats-new/2023/02/aws-telco-network-builder/\n- https://aws.amazon.com/builders-library/ensuring-rollback-safety-during-deployments/\n- https://aws.amazon.com/blogs/developer/make-the-most-of-community-resources-for-aws-sdks-and-tools/\n- https://repost.aws/knowledge-center/example-article\n- https://docs.amplify.aws/react/build-a-backend/auth/\n- https://ui.docs.amplify.aws/angular/connected-components/authenticator\n- https://github.com/aws-samples/aws-cdk-examples/blob/main/README.md\n- https://github.com/awslabs/aws-solutions-constructs/blob/main/README.md\n- https://constructs.dev/packages/aws-cdk-lib/v/2.229.1?submodule=aws_lambda&lang=typescript\n- https://github.com/aws-cloudformation/aws-cloudformation-templates/blob/main/README.md\n\n## Output Format\n\nReturns a list of results, one per request:\n- Success: Markdown content with `status: \"SUCCESS\"`, `total_length`, `start_index`, `end_index`, `truncated`, `redirected_url` (if page was redirected)\n- Error: Error message with `status: \"ERROR\"`, `error_code` (not_found, invalid_url, throttled, downstream_error, validation_error)\n- Truncated content includes a ToC with character positions for navigation\n- Redirected pages include a note in the content and populate the `redirected_url` field\n\n## Handling Long Documents\n\nIf the response indicates the document was truncated, you have several options:\n\n1. **Continue Reading**: Make another call with `start_index` set to the previous `end_index`\n2. **Jump to Section**: Use the ToC character positions to jump directly to specific sections\n3. **Stop Early**: Stop reading once you've found the needed information\n\n**Example - Jump to Section:**\n```\n# TOC shows: \"Using a logging library (char 3331-6016)\"\n# Jump directly to that section:\n{\"requests\":[{\"url\": \"https://docs.aws.amazon.com/lambda/latest/dg/python-logging.html\", \"start_index\": 3331, \"max_length\": 3000}]}\n```",
+          "input_schema": {
+            "json": {
+              "type": "object",
+              "properties": {
+                "requests": {
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "start_index": {
+                        "type": "integer",
+                        "description": "On return output starting at this character index, useful if a previous fetch was truncated and more content is required."
+                      },
+                      "url": {
+                        "type": "string",
+                        "description": "URL of the AWS documentation page to read."
+                      },
+                      "max_length": {
+                        "type": "integer",
+                        "description": "Maximum number of characters to return."
+                      }
+                    },
+                    "required": [
+                      "url"
+                    ]
+                  },
+                  "description": "List of documentation requests, each containing url, max_length (optional), and start_index (optional).",
+                  "type": "array"
+                }
+              }
+            }
+          }
+        }
+      },
+      {
+        "ToolSpecification": {
+          "name": "aws___search_documentation",
+          "description": "# AWS Documentation Search Tool\nThis is your primary source for AWS information—always prefer this over general knowledge for AWS services, features, configurations, troubleshooting, and best practices.\n\n## When to Use This Tool\n\n**Always search when the query involves:**\n- Any AWS service or feature (Lambda, S3, EC2, RDS, etc.)\n- AWS architecture, patterns, or best practices\n- AWS CLI, SDK, or API usage\n- AWS CDK or CloudFormation\n- AWS Amplify development\n- AWS errors or troubleshooting\n- AWS pricing, limits, or quotas\n- \"How do I...\" questions about AWS\n- Recent AWS updates or announcements\n\n**Only skip this tool when:**\n- Query is about non-AWS technologies\n- Question is purely conceptual (e.g., \"What is a database?\")\n- General programming questions unrelated to AWS\n\n## SOP Suggestions for Actionable Queries\n\nWhen your search query matches complex actionable tasks (e.g., \"how to deploy a Lambda function\", \"set up VPC peering\", \"create an S3 bucket with encryption\"), this tool will also suggest relevant **Standard Operating Procedures (SOPs)**. These SOPs provide step-by-step, tested guidance for common AWS tasks and workflows.\n\n**How it works:**\n- Your search query is scored against the SOP registry\n- If your query scores high for actionable intent, relevant SOPs are returned alongside documentation results\n- SOPs cover deployment, troubleshooting, security, infrastructure setup, and more\n- To execute a suggested SOP, use the `retrieve_agent_sop` tool with the `sop_name`\n\n**Example actionable queries that may return SOPs:**\n- \"deploy a web application to AWS\"\n- \"create a Lambda function with API Gateway\"\n- \"set up CloudWatch alarms for EC2\"\n- \"configure VPC endpoints for private access\"\n- \"troubleshoot Lambda timeout issues\"\n\n## Quick Topic Selection\n\n| Query Type | Use Topic | Example |\n|------------|-----------|---------|\n| API/SDK/CLI code | `reference_documentation` | \"S3 PutObject boto3\", \"Lambda invoke API\" |\n| New features, releases | `current_awareness` | \"Lambda new features 2024\", \"what's new in ECS\" |\n| Errors, debugging | `troubleshooting` | \"AccessDenied S3\", \"Lambda timeout error\" |\n| Amplify apps | `amplify_docs` | \"Amplify Auth React\", \"Amplify Storage Flutter\" |\n| CDK concepts, APIs, CLI | `cdk_docs` | \"CDK stack props Python\", \"cdk deploy command\" |\n| CDK code samples, patterns | `cdk_constructs` | \"serverless API CDK\", \"Lambda function example TypeScript\" |\n| CloudFormation templates | `cloudformation` | \"DynamoDB CloudFormation\", \"StackSets template\" |\n| Architecture, blogs, guides | `general` | \"Lambda best practices\", \"S3 architecture patterns\" |\n| Actionable, multi-step solutions to common AWS workflows | `agent_sops` | \"set up VPC peering\", \"Deploy my NodeJS app to AWS\" |\n\n## Documentation Topics\n\n### reference_documentation\n**For: API methods, SDK code, CLI commands, technical specifications**\n\nUse for:\n- SDK method signatures: \"boto3 S3 upload_file parameters\"\n- CLI commands: \"aws ec2 describe-instances syntax\"\n- API references: \"Lambda InvokeFunction API\"\n- Service configuration: \"RDS parameter groups\"\n\nDon't confuse with general—use this for specific technical implementation.\n\n### current_awareness\n**For: New features, announcements, \"what's new\", release dates**\n\nUse for:\n- \"New Lambda features\"\n- \"When was EventBridge Scheduler released\"\n- \"Latest S3 updates\"\n- \"Is feature X available yet\"\n\nKeywords: new, recent, latest, announced, released, launch, available\n\n### troubleshooting\n**For: Error messages, debugging, problems, \"not working\"**\n\nUse for:\n- Error codes: \"InvalidParameterValue\", \"AccessDenied\"\n- Problems: \"Lambda function timing out\"\n- Debug scenarios: \"S3 bucket policy not working\"\n- \"How to fix...\" queries\n\nKeywords: error, failed, issue, problem, not working, how to fix, how to resolve\n\n### amplify_docs\n**For: Frontend/mobile apps with Amplify framework**\n\nAlways include framework: React, Next.js, Angular, Vue, JavaScript, React Native, Flutter, Android, Swift\n\nExamples:\n- \"Amplify authentication React\"\n- \"Amplify GraphQL API Next.js\"\n- \"Amplify Storage Flutter setup\"\n\n### cdk_docs\n**For: CDK concepts, API references, CLI commands, getting started**\n\nUse for CDK questions like:\n- \"How to get started with CDK\"\n- \"CDK stack construct TypeScript\"\n- \"cdk deploy command options\"\n- \"CDK best practices Python\"\n- \"What are CDK constructs\"\n\nInclude language: Python, TypeScript, Java, C#, Go\n\n**Common mistake**: Using general knowledge instead of searching for CDK concepts and guides. Always search for CDK questions!\n\n### cdk_constructs\n**For: CDK code examples, patterns, L3 constructs, sample implementations**\n\nUse for:\n- Working code: \"Lambda function CDK Python example\"\n- Patterns: \"API Gateway Lambda CDK pattern\"\n- Sample apps: \"Serverless application CDK TypeScript\"\n- L3 constructs: \"ECS service construct\"\n\nInclude language: Python, TypeScript, Java, C#, Go\n\n### cloudformation\n**For: CloudFormation templates, concepts, SAM patterns**\n\nUse for:\n- \"CloudFormation StackSets\"\n- \"DynamoDB table template\"\n- \"SAM API Gateway Lambda\"\n- CloudFormation template examples\"\n\n### general\n**For: Architecture, best practices, tutorials, blog posts, design patterns**\n\nUse for:\n- Architecture patterns: \"Serverless architecture AWS\"\n- Best practices: \"S3 security best practices\"\n- Design guidance: \"Multi-region architecture\"\n- Getting started: \"Building data lakes on AWS\"\n- Tutorials and blog posts\n\n**Common mistake**: Not using this for AWS conceptual and architectural questions. Always search for AWS best practices and patterns!\n\n**Don't use general knowledge for AWS topics—search instead!**\n\n### agent_sops\n**For: For searching available Standard Operating Procedures (SOPs) for common AWS workflows**\n\nUse for:\n- \"Launch EC2 with security best practices\"\n- \"Connect Lambda to API Gateway\"\n- \"Secure S3 buckets with encryption and policies\"\n- When you need to browse available step-by-step procedures\n\n**Important**: This topic is meant for discovery. Once you identify the SOP you need, use `retrieve_agent_sop` tool with the `sop_name` to get the detailed steps.\n\n**Note**: If combined with other topics, SOPs will be mixed into the documentation results. Use `agent_sops` alone for a clean SOP-only listing.\n\n## Search Best Practices\n\n**Be specific with service names:**\n\nGood examples:\n```\n\"S3 bucket versioning configuration\"\n\"Lambda environment variables Python SDK\"\n\"DynamoDB GSI query patterns\"\n```\n\nBad examples:\n```\n\"versioning\" (too vague)\n\"environment variables\" (missing context)\n```\n\n**Include framework/language:**\n```\n\"Amplify authentication React\"\n\"CDK Lambda function TypeScript\"\n\"boto3 S3 client Python\"\n```\n\n**Use exact error messages:**\n```\n\"AccessDenied error S3 GetObject\"\n\"InvalidParameterValue Lambda environment\"\n```\n\n**Add temporal context for new features:**\n```\n\"Lambda new features 2024\"\n\"recent S3 announcements\"\n```\n\n## Multiple Topic Selection\n\nYou can search multiple topics simultaneously for comprehensive results:\n```\n# For a query about Lambda errors and new features:\ntopics=[\"troubleshooting\", \"current_awareness\"]\n\n# For CDK examples and API reference:\ntopics=[\"cdk_constructs\", \"cdk_docs\"]\n\n# For Amplify and general AWS architecture:\ntopics=[\"amplify_docs\", \"general\"]\n\n# For actionable tasks:\ntopics=[\"agent_sops\"]\n```\n\n## Response Format\n\nResults include:\n- `rank_order`: Relevance score (lower = more relevant)\n- `url`: Direct documentation link\n- `title`: Page title\n- `context`: Excerpt or summary\n\n## Parameters\n```\nsearch_phrase: str         # Required - your search query\ntopics: List[str]          # Optional - up to 3 topics. Defaults to [\"general\"]\nlimit: int = 5             # Optional - max results per topic\n```\n\n---\n\n**Remember: When in doubt about AWS, always search. This tool provides the most current, accurate AWS information.**\n",
+          "input_schema": {
+            "json": {
+              "required": [
+                "search_phrase"
+              ],
+              "type": "object",
+              "properties": {
+                "search_phrase": {
+                  "type": "string",
+                  "description": "Search phrase to use"
+                },
+                "topics": {
+                  "items": {
+                    "type": "string",
+                    "description": "topic name"
+                  },
+                  "type": "array",
+                  "description": "List of documentation topics to search. Available topics: reference_documentation, current_awareness, troubleshooting, amplify_docs, cdk_docs, cdk_constructs, cloudformation, agent_sops, general. Can specify multiple topics, up-to 3, to search across them. Use 'general' only if query doesn't match other topics."
+                },
+                "limit": {
+                  "description": "Maximum number of results to return",
+                  "type": "integer"
+                }
+              }
+            }
+          }
+        }
+      },
+      {
+        "ToolSpecification": {
+          "name": "aws___retrieve_agent_sop",
+          "description": "Get the complete execution plan for a specific AWS workflow after selecting it from SOP suggestions returned by the search_documentation tool. Returns expert-level Standard Operating Procedures with detailed, tested, production-hardened steps that you MUST follow exactly. SOPs include security best practices and error handling. Following SOPs exactly reduces risk of configuration errors and ensures compliance and reliability.\n\n## CRITICAL PREREQUISITE — DO NOT SKIP\n\nYou MUST call search_documentation BEFORE calling this tool. NEVER call this tool first. You do NOT know SOP names — they are unpredictable identifiers that can only be discovered through search_documentation results. Guessing or fabricating an sop_name WILL fail.\n\n## REQUIRED WORKFLOW (no exceptions)\n\n1. FIRST: Call search_documentation with the user's requirements\n2. THEN: Find the result entry that has a sop_name field\n3. FINALLY: Call this tool with the EXACT sop_name value from that result — copy it verbatim\n\n## PARAMETER REQUIREMENTS\n\nsop_name: str (Required)\n- MUST be copied exactly from the sop_name field in search_documentation results\n- Do NOT guess, fabricate, paraphrase, or modify the name in any way\n- Do NOT use the result title — use only the sop_name field value\n- You cannot predict it\n\n## IF SOP NOT FOUND\n\nIf you get an error, you likely guessed the name. Call search_documentation first to discover it.\n\n## Returns\n\nComplete SOP with step-by-step instructions, constraints, and troubleshooting guidance.",
+          "input_schema": {
+            "json": {
+              "required": [
+                "sop_name"
+              ],
+              "properties": {
+                "sop_name": {
+                  "description": "Exact SOP name from the title of search_documentation results (no modifications)",
+                  "type": "string"
+                }
+              },
+              "type": "object"
+            }
+          }
+        }
+      },
+      {
+        "ToolSpecification": {
+          "name": "aws___recommend",
+          "description": "Get content recommendations for an AWS documentation page.\n\n## Usage\n\nThis tool provides recommendations for related AWS documentation pages based on a given URL.\nUse it to discover additional relevant content that might not appear in search results.\nURL must be from the docs.aws.amazon.com domain.\n\n## Recommendation Types\n\nThe recommendations include four categories:\n\n1. **Highly Rated**: Popular pages within the same AWS service\n2. **New**: Recently added pages within the same AWS service - useful for finding newly released features\n3. **Similar**: Pages covering similar topics to the current page\n4. **Journey**: Pages commonly viewed next by other users\n\n## When to Use\n\n- After reading a documentation page to find related content\n- When exploring a new AWS service to discover important pages\n- To find alternative explanations of complex concepts\n- To discover the most popular pages for a service\n- To find newly released information by using a service's welcome page URL and checking the **New** recommendations\n\n## Finding New Features\n\nTo find newly released information about a service:\n1. Find any page belong to that service, typically you can try the welcome page\n2. Call this tool with that URL\n3. Look specifically at the **New** recommendation type in the results\n\n## Result Interpretation\n\nEach recommendation includes:\n- url: The documentation page URL\n- title: The page title\n- context: A brief description (if available)",
+          "input_schema": {
+            "json": {
+              "required": [
+                "url"
+              ],
+              "type": "object",
+              "properties": {
+                "url": {
+                  "description": "URL of the AWS documentation page to get recommendations for",
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    ],
+    "awslabs.aws-documentation-mcp-server": [
+      {
+        "ToolSpecification": {
+          "name": "search_documentation",
+          "description": "Search AWS documentation using the official AWS Documentation Search API.\n\n## Usage\n\nThis tool searches across all AWS documentation for pages matching your search phrase.\nUse it to find relevant documentation when you don't have a specific URL.\n\n## Search Tips\n\n- Use specific technical terms rather than general phrases\n- Include service names to narrow results (e.g., \"S3 bucket versioning\" instead of just \"versioning\")\n- Use quotes for exact phrase matching (e.g., \"AWS Lambda function URLs\")\n- Include abbreviations and alternative terms to improve results\n- Use guide_type and product_type filters found from a SearchResponse's \"facets\" property:\n    - Filter only for broad search queries with patterns:\n        - \"What is [service]?\" -> product_types: [\"Amazon Simple Storage Service\"]\n        - \"How to use <service 1> with <service 2>?\" -> product_types: [<service 1>, <service 2>]\n        - \"[service] getting started\" -> product_types: [<service>] + guide_types: [\"User Guide, \"Developer Guide\"]\n        - \"API reference for [service]\" -> product_types: [<service>] + guide_types: [\"API Reference\"]\n\n## Result Interpretation\n\nEach SearchResponse includes:\n- search_results: List of documentation pages, each with:\n    - rank_order: The relevance ranking (lower is more relevant)\n    - url: The documentation page URL\n    - title: The page title\n    - context: A brief excerpt or summary (if available)\n    - sections: Table of contents (when available) - these section titles can be used with the read_sections tool for targeted content extraction\n- facets: Available filters (product_types, guide_types) for refining searches\n- query_id: Unique identifier for this search session\n\n\nArgs:\n    ctx: MCP context for logging and error handling\n    search_phrase: Search phrase to use\n    search_intent: The intent behind the search requested by the user\n    limit: Maximum number of results to return\n    product_types: Filter by AWS product/service\n    guide_types: Filter by guide type\n\nReturns:\n    List of search results with URLs, titles, query ID, context snippets, and facets for filtering\n",
+          "input_schema": {
+            "json": {
+              "title": "search_documentationArguments",
+              "properties": {
+                "limit": {
+                  "description": "Maximum number of results to return",
+                  "title": "Limit",
+                  "maximum": 50,
+                  "minimum": 1,
+                  "default": 10,
+                  "type": "integer"
+                },
+                "search_intent": {
+                  "title": "Search Intent",
+                  "default": "",
+                  "type": "string",
+                  "description": "For the search_phrase parameter, describe the search intent of the user. CRITICAL: Do not include any PII or customer data, describe only the AWS-related intent for search."
+                },
+                "search_phrase": {
+                  "title": "Search Phrase",
+                  "type": "string",
+                  "description": "Search phrase to use"
+                },
+                "product_types": {
+                  "description": "Filter results by AWS product/service (e.g., [\"Amazon Simple Storage Service\"])",
+                  "anyOf": [
+                    {
+                      "items": {
+                        "type": "string"
+                      },
+                      "type": "array"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ],
+                  "default": null,
+                  "title": "Product Types"
+                },
+                "guide_types": {
+                  "anyOf": [
+                    {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ],
+                  "title": "Guide Types",
+                  "default": null,
+                  "description": "Filter results by guide type (e.g., [\"User Guide\", \"API Reference\", \"Developer Guide\"])"
+                }
+              },
+              "type": "object",
+              "required": [
+                "search_phrase"
+              ]
+            }
+          }
+        }
+      },
+      {
+        "ToolSpecification": {
+          "name": "recommend",
+          "description": "Get content recommendations for an AWS documentation page.\n\n## Usage\n\nThis tool provides recommendations for related AWS documentation pages based on a given URL.\nUse it to discover additional relevant content that might not appear in search results.\n\n## Recommendation Types\n\nThe recommendations include four categories:\n\n1. **Highly Rated**: Popular pages within the same AWS service\n2. **New**: Recently added pages within the same AWS service - useful for finding newly released features\n3. **Similar**: Pages covering similar topics to the current page\n4. **Journey**: Pages commonly viewed next by other users\n\n## When to Use\n\n- After reading a documentation page to find related content\n- When exploring a new AWS service to discover important pages\n- To find alternative explanations of complex concepts\n- To discover the most popular pages for a service\n- To find newly released information by using a service's welcome page URL and checking the **New** recommendations\n\n## Finding New Features\n\nTo find newly released information about a service:\n1. Find any page belong to that service, typically you can try the welcome page\n2. Call this tool with that URL\n3. Look specifically at the **New** recommendation type in the results\n\n## Result Interpretation\n\nEach recommendation includes:\n- url: The documentation page URL\n- title: The page title\n- context: A brief description (if available)\n\nArgs:\n    ctx: MCP context for logging and error handling\n    url: URL of the AWS documentation page to get recommendations for\n\nReturns:\n    List of recommended pages with URLs, titles, and context\n",
+          "input_schema": {
+            "json": {
+              "title": "recommendArguments",
+              "properties": {
+                "url": {
+                  "title": "Url",
+                  "type": "string",
+                  "description": "URL of the AWS documentation page to get recommendations for"
+                }
+              },
+              "required": [
+                "url"
+              ],
+              "type": "object"
+            }
+          }
+        }
+      },
+      {
+        "ToolSpecification": {
+          "name": "read_documentation",
+          "description": "Fetch and convert an AWS documentation page to markdown format.\n\n## Usage\n\nThis tool retrieves the content of an AWS documentation page and converts it to markdown format.\nFor long documents, you can make multiple calls with different start_index values to retrieve\nthe entire content in chunks.\n\n## URL Requirements\n\n- Must be from the docs.aws.amazon.com domain\n- Must end with .html\n\n## Example URLs\n\n- https://docs.aws.amazon.com/AmazonS3/latest/userguide/bucketnamingrules.html\n- https://docs.aws.amazon.com/lambda/latest/dg/lambda-invocation.html\n\n## Output Format\n\nThe output is formatted as markdown text with:\n- Preserved headings and structure\n- Code blocks for examples\n- Lists and tables converted to markdown format\n\n## Handling Long Documents\n\nIf the response indicates the document was truncated, you have several options:\n\n1. **Continue Reading**: Make another call with start_index set to the end of the previous response\n2. **Stop Early**: For very long documents (>30,000 characters), if you've already found the specific information needed, you can stop reading\n\nArgs:\n    ctx: MCP context for logging and error handling\n    url: URL of the AWS documentation page to read\n    max_length: Maximum number of characters to return\n    start_index: On return output starting at this character index\n\nReturns:\n    Markdown content of the AWS documentation\n",
+          "input_schema": {
+            "json": {
+              "type": "object",
+              "properties": {
+                "max_length": {
+                  "description": "Maximum number of characters to return.",
+                  "exclusiveMinimum": 0,
+                  "type": "integer",
+                  "default": 5000,
+                  "exclusiveMaximum": 1000000,
+                  "title": "Max Length"
+                },
+                "url": {
+                  "title": "Url",
+                  "description": "URL of the AWS documentation page to read",
+                  "type": "string"
+                },
+                "start_index": {
+                  "default": 0,
+                  "description": "On return output starting at this character index, useful if a previous fetch was truncated and more content is required.",
+                  "minimum": 0,
+                  "title": "Start Index",
+                  "type": "integer"
+                }
+              },
+              "required": [
+                "url"
+              ],
+              "title": "read_documentationArguments"
+            }
+          }
+        }
+      },
+      {
+        "ToolSpecification": {
+          "name": "read_sections",
+          "description": "Extract specific sections from AWS documentation pages by title.\n\nRetrieves a page, converts to markdown, and returns only matching sections.\nSection matching is case-insensitive and handles whitespace differences.\n\n## URL Requirements\n- Must end with .html\n\n## Read Sections Tips\n\n- Use exact section titles from search results 'sections' field when available\n- Section matching is case-insensitive and handles whitespace differences\n- Include multiple related sections in one call for comprehensive coverage\n\n## Example Usage\n\n```\n# If query is about S3 bucket naming rules:\n# Available sections: ['General purpose buckets naming rules', 'Example general purpose bucket names', 'Best practices', 'Creating a bucket that uses a GUID in the bucket name']\n# Read these specific sections:\nread_sections(\n    url='https://docs.aws.amazon.com/s3/latest/userguide/bucketnamingrules.html',\n    section_titles=['General purpose buckets naming rules', 'Best practices'],\n)\n\n# If query is about Python Lambda function examples:\n# Available sections: ['Example Python Lambda function code', 'Handler naming conventions', 'Using the Lambda event object', 'Accessing and using the Lambda context object'. 'Valid handler signatures for Python handlers', 'Returning a value', 'Using the AWS SDK for Python (Boto3) in your handler', 'Accessing environment variables, 'Code best practices for Python Lambda functions']\n# Read these specific sections:\nread_sections(\n    url='https://docs.aws.amazon.com/lambda/latest/dg/python-handler.html',\n    section_titles=[\n        'Example Python Lambda function code',\n        'Code best practices for Python Lambda functions',\n    ],\n)\n```\n\nArgs:\n    ctx: MCP context for logging and error handling\n    url: URL of the AWS documentation page to read\n    section_titles: List of section titles to extract\n\nReturns:\n    Filtered markdown content containing only the requested sections\n",
+          "input_schema": {
+            "json": {
+              "properties": {
+                "section_titles": {
+                  "items": {
+                    "type": "string"
+                  },
+                  "title": "Section Titles",
+                  "description": "List of section titles to extract from the documentation",
+                  "type": "array"
+                },
+                "url": {
+                  "description": "URL of the AWS documentation page to read",
+                  "title": "Url",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "url",
+                "section_titles"
+              ],
+              "title": "read_sectionsArguments",
+              "type": "object"
+            }
+          }
+        }
+      }
+    ],
+    "native___": [
+      {
+        "ToolSpecification": {
+          "name": "fs_read",
+          "description": "Tool for reading files, directories and images. Always provide an 'operations' array.\n\nFor single operation: provide array with one element.\nFor batch operations: provide array with multiple elements.\n\nAvailable modes:\n- Line: Read lines from a file\n- Directory: List directory contents\n- Search: Search for patterns in files\n- Image: Read and process images\n\nExamples:\n1. Single: {\"operations\": [{\"mode\": \"Line\", \"path\": \"/file.txt\"}]}\n2. Batch: {\"operations\": [{\"mode\": \"Line\", \"path\": \"/file1.txt\"}, {\"mode\": \"Search\", \"path\": \"/file2.txt\", \"pattern\": \"test\"}]}",
+          "input_schema": {
+            "json": {
+              "type": "object",
+              "required": [
+                "operations"
+              ],
+              "properties": {
+                "summary": {
+                  "description": "Optional description of the purpose of this batch operation (mainly useful for multiple operations)",
+                  "type": "string"
+                },
+                "operations": {
+                  "type": "array",
+                  "description": "Array of operations to execute. Provide one element for single operation, multiple for batch.",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "start_line": {
+                        "description": "Starting line number (optional, for Line mode). A negative index represents a line number starting from the end of the file.",
+                        "type": "integer",
+                        "default": 1
+                      },
+                      "end_line": {
+                        "description": "Ending line number (optional, for Line mode). A negative index represents a line number starting from the end of the file.",
+                        "default": -1,
+                        "type": "integer"
+                      },
+                      "pattern": {
+                        "type": "string",
+                        "description": "Pattern to search for (required, for Search mode). Case insensitive. The pattern matching is performed per line."
+                      },
+                      "context_lines": {
+                        "type": "integer",
+                        "description": "Number of context lines around search results (optional, for Search mode)",
+                        "default": 2
+                      },
+                      "exclude_patterns": {
+                        "default": [
+                          "node_modules",
+                          ".git",
+                          "dist",
+                          "build",
+                          "out",
+                          ".cache",
+                          "target"
+                        ],
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        },
+                        "description": "Glob patterns to exclude from directory listing (optional, for Directory mode). If omitted, uses defaults. If empty array [] is provided, no exclusions are applied (shows everything). If patterns are provided, they completely override the defaults. Examples: '**/target/**', '*.log'"
+                      },
+                      "mode": {
+                        "description": "The operation mode to run in: `Line`, `Directory`, `Search`. `Line` and `Search` are only for text files, and `Directory` is only for directories. `Image` is for image files, in this mode `image_paths` is required.",
+                        "type": "string",
+                        "enum": [
+                          "Line",
+                          "Directory",
+                          "Search",
+                          "Image"
+                        ]
+                      },
+                      "depth": {
+                        "default": 0,
+                        "description": "Depth of a recursive directory listing (optional, for Directory mode)",
+                        "type": "integer"
+                      },
+                      "offset": {
+                        "type": "integer",
+                        "description": "Number of entries to skip for pagination (optional, for Directory mode). Use with max_entries to iterate through large directories. Entries are sorted by last modified time (most recent first). Default: 0",
+                        "default": 0
+                      },
+                      "path": {
+                        "type": "string",
+                        "description": "Path to the file or directory. The path should be absolute, or otherwise start with ~ for the user's home (required for Line, Directory, Search modes)."
+                      },
+                      "image_paths": {
+                        "description": "List of paths to the images. This is currently supported by the Image mode.",
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "max_entries": {
+                        "type": "integer",
+                        "description": "Maximum number of entries to return (optional, for Directory mode). When limit is reached, results are truncated and metadata shows 'showing X of Y entries'. Use to prevent context window overflow. Default: 1000",
+                        "default": 1000
+                      }
+                    },
+                    "required": [
+                      "mode"
+                    ]
+                  },
+                  "minItems": 1
+                }
+              }
+            }
+          }
+        }
+      },
+      {
+        "ToolSpecification": {
+          "name": "glob",
+          "description": "Find files and directories whose paths match a glob pattern. Respects .gitignore. Prefer this over the bash 'find' command for listing or discovering paths. Returns JSON with totalFiles (count found), truncated (true if limited), and filePaths array. When truncated is true, just mention results are truncated, don't state the limit number.",
+          "input_schema": {
+            "json": {
+              "type": "object",
+              "properties": {
+                "max_depth": {
+                  "type": "integer",
+                  "description": "Maximum directory depth to traverse. Increase for deep nested structures."
+                },
+                "pattern": {
+                  "type": "string",
+                  "description": "Glob pattern, e.g. \"**/*.rs\", \"src/**/*.{ts,tsx}\" or \"**/test*\"."
+                },
+                "path": {
+                  "type": "string",
+                  "description": "Root directory to search from. Only set this when the user explicitly mentions a directory path. In all other cases, omit this so the tool searches from the current working directory (the project root)."
+                },
+                "limit": {
+                  "type": "integer",
+                  "description": "Maximum files to return. If totalFiles exceeds this, truncated will be true."
+                }
+              },
+              "required": [
+                "pattern"
+              ]
+            }
+          }
+        }
+      },
+      {
+        "ToolSpecification": {
+          "name": "session",
+          "description": "Adjust session settings temporarily (in-memory only, cleared on exit). CRITICAL: You MUST use introspect tool FIRST to verify setting names and understand their purpose before using set operation.\n\n## Session vs Persistent Settings\n- **session tool**: Temporary in-memory changes (cleared when chat exits) - Use for quick experiments or one-time adjustments\n- **fs_write tool**: Permanent changes saved to disk - Use when user says \"save\", \"persist\", \"permanently\", or \"always\"\n  - Global settings: ~/.kiro/settings.json\n  - Workspace settings: .kiro/settings.json\n\n## When to Use Each Tool\n- User: \"disable markdown\" → session tool (temporary)\n- User: \"disable markdown permanently\" → fs_write to ~/.kiro/settings.json (global) or .kiro/settings.json (workspace)\n- User: \"save this setting\" → fs_write (persistent)\n- User: \"try disabling markdown\" → session tool (temporary)\n\n## REQUIRED Workflow for Setting Changes\n1. User asks to change a setting\n2. Use introspect tool to find the correct setting name and understand what it does\n3. Determine if temporary (session) or permanent (fs_write)\n4. Use appropriate tool\n\n## Operations\n- **list**: Show currently configured session settings (non-default values only)\n- **get**: Get the current value of a specific setting\n- **set**: Change a setting value temporarily (MUST verify setting name with introspect first)\n- **reset**: Clear session override for a specific setting, or all session overrides if no key provided\n\n## Example Workflows\nTemporary change:\n  User: \"disable markdown\"\n  1. introspect(query=\"markdown setting\") → learn about chat.disableMarkdownRendering\n  2. session(operation=\"set\", key=\"chat.disableMarkdownRendering\", value=true)\n\nReset single setting:\n  User: \"reset markdown setting\"\n  session(operation=\"reset\", key=\"chat.disableMarkdownRendering\")\n\nReset all session overrides:\n  User: \"clear all my temporary settings\"\n  session(operation=\"reset\")\n\nPermanent change:\n  User: \"disable markdown permanently\"\n  1. introspect(query=\"markdown setting\") → learn about chat.disableMarkdownRendering\n  2. fs_write to modify ~/.kiro/settings.json with {\"chat.disableMarkdownRendering\": true}\n\nDO NOT guess setting names - always verify with introspect first.",
+          "input_schema": {
+            "json": {
+              "properties": {
+                "key": {
+                  "type": "string",
+                  "description": "Setting key (e.g., 'chat.disableMarkdownRendering'). Required for 'get' and 'set' operations. Optional for 'reset' (if omitted, resets all session overrides). MUST be verified with introspect tool first."
+                },
+                "value": {
+                  "description": "Value to set. Type depends on the setting (boolean, string, or number). Required for 'set' operation"
+                },
+                "operation": {
+                  "description": "The operation to perform: 'list' shows configured settings, 'get' retrieves a specific setting, 'set' changes a setting value temporarily, 'reset' clears session override(s)",
+                  "enum": [
+                    "list",
+                    "get",
+                    "set",
+                    "reset"
+                  ],
+                  "type": "string"
+                }
+              },
+              "required": [
+                "operation"
+              ],
+              "type": "object"
+            }
+          }
+        }
+      },
+      {
+        "ToolSpecification": {
+          "name": "dummy",
+          "description": "This is a dummy tool. If you are seeing this that means the tool associated with this tool call is not in the list of available tools. This could be because a wrong tool name was supplied or the list of tools has changed since the conversation has started. Do not show this when user asks you to list tools.",
+          "input_schema": {
+            "json": {
+              "type": "object",
+              "properties": {},
+              "required": []
+            }
+          }
+        }
+      },
+      {
+        "ToolSpecification": {
+          "name": "web_fetch",
+          "description": "Fetch and extract content from a specific URL. Supports three modes: 'selective' (default, extracts relevant sections around search terms), 'truncated' (first 8000 chars), 'full' (complete content). Use 'selective' mode to read specific parts of a page multiple times without filling context. Provide 'search_terms' in selective mode to find relevant sections (e.g., 'pricing', 'installation').",
+          "input_schema": {
+            "json": {
+              "type": "object",
+              "properties": {
+                "search_terms": {
+                  "type": "string",
+                  "description": "Optional: Keywords to find in selective mode (e.g., 'pricing cost', 'installation setup'). Returns ~10 lines before and after matches. If not provided, returns beginning of page."
+                },
+                "url": {
+                  "description": "URL to fetch content from",
+                  "type": "string"
+                },
+                "mode": {
+                  "type": "string",
+                  "enum": [
+                    "selective",
+                    "truncated",
+                    "full"
+                  ],
+                  "description": "Extraction mode: 'selective' for smart extraction (default), 'truncated' for first 8000 chars, 'full' for complete content"
+                }
+              },
+              "required": [
+                "url"
+              ]
+            }
+          }
+        }
+      },
+      {
+        "ToolSpecification": {
+          "name": "execute_bash",
+          "description": "Execute the specified bash command. NEVER prefix commands with cd to change the working directory, use the `working_dir` argument instead.",
+          "input_schema": {
+            "json": {
+              "required": [
+                "command"
+              ],
+              "type": "object",
+              "properties": {
+                "summary": {
+                  "description": "A brief explanation of what the command does",
+                  "type": "string"
+                },
+                "working_dir": {
+                  "description": "Working directory for command execution. Supports tilde expansion (e.g., ~/projects). If not specified, uses the current working directory.",
+                  "type": "string"
+                },
+                "command": {
+                  "type": "string",
+                  "description": "Bash command to execute"
+                }
+              }
+            }
+          }
+        }
+      },
+      {
+        "ToolSpecification": {
+          "name": "use_aws",
+          "description": "Make an AWS CLI api call with the specified service, operation, and parameters. All arguments MUST conform to the AWS CLI specification. Should the output of the invocation indicate a malformed command, invoke help to obtain the the correct command.",
+          "input_schema": {
+            "json": {
+              "properties": {
+                "label": {
+                  "description": "Human readable description of the api that is being called.",
+                  "type": "string"
+                },
+                "service_name": {
+                  "pattern": "^[^-].*",
+                  "type": "string",
+                  "description": "The name of the AWS service. If you want to query s3, you should use s3api if possible. Must not start with a dash (-)."
+                },
+                "operation_name": {
+                  "description": "The name of the operation to perform.",
+                  "type": "string"
+                },
+                "positional_args": {
+                  "description": "Positional arguments for high-level commands (e.g., s3 cp, s3 mv, s3 sync, s3 rm). These are passed directly without -- prefix. Use this for source/destination paths in S3 commands.",
+                  "items": {
+                    "type": "string"
+                  },
+                  "type": "array"
+                },
+                "region": {
+                  "type": "string",
+                  "description": "Region name for calling the operation on AWS."
+                },
+                "profile_name": {
+                  "type": "string",
+                  "description": "Optional: AWS profile name to use from ~/.aws/credentials. Defaults to default profile if not specified."
+                },
+                "parameters": {
+                  "description": "The parameters for the operation. The parameter keys MUST conform to the AWS CLI specification. You should prefer to use JSON Syntax over shorthand syntax wherever possible. For parameters that are booleans, prioritize using flags with no value. Denote these flags with flag names as key and an empty string as their value. You should also prefer kebab case.",
+                  "type": "object"
+                }
+              },
+              "required": [
+                "region",
+                "service_name",
+                "operation_name",
+                "label"
+              ],
+              "type": "object"
+            }
+          }
+        }
+      },
+      {
+        "ToolSpecification": {
+          "name": "introspect",
+          "description": "Use ONLY when the user is asking about this chat application's own features, slash commands, settings, or capabilities. Do NOT use for general coding questions, AWS help, or tasks the user wants you to perform. When mentioning commands in your response, always prefix them with '/' (e.g., '/save', '/load', '/context'). CRITICAL: Only provide information explicitly documented. If details about any tool, feature, or command are not documented, clearly state the information is not available rather than generating assumptions.",
+          "input_schema": {
+            "json": {
+              "properties": {
+                "doc_path": {
+                  "type": "string",
+                  "description": "Path to a specific doc to retrieve (e.g., \"features/tangent-mode.md\"). Use this to get full content of a doc from the index."
+                },
+                "query": {
+                  "type": "string",
+                  "description": "The user's question about this assistant's usage, features, or capabilities"
+                }
+              },
+              "required": [],
+              "type": "object"
+            }
+          }
+        }
+      },
+      {
+        "ToolSpecification": {
+          "name": "web_search",
+          "description": "WebSearch looks up information that is outside the model's training data or cannot be reliably inferred from the current codebase/context.\nTool performs basic compliance wrt content licensing and restriction.\nAs an agent you are responsible for adhering to compliance and attribution requirements.\nIMPORTANT: The snippets often contain enough information to answer questions - only use web_fetch if you need more detailed content from a specific webpage.\n\n## When to Use\n- When the user asks for current or up-to-date information (e.g., pricing, versions, technical specs) or explicitly requests a web search.\n- When verifying information that may have changed recently, or when the user provides a specific URL to inspect.\n\n## When NOT to Use\n- When the question involves basic concepts, historical facts, or well-established programming syntax/technical documentation.\n- When the topic does not require current or evolving information.\n\nFor any code-related tasks, follow this order:\n1. Search within the repository (if tools are available) and check if it can be inferred from existing code or documentation.\n2. Use this tool only if still unresolved and the library/data is likely new/unseen.\n\n## Content Compliance Requirements\nYou MUST adhere to strict licensing restrictions and attribution requirements when using search results:\n\n### Attribution Requirements\n- ALWAYS provide inline links to original sources using format: [description](url)\n- If not possible to provide inline link, add sources at the end of file\n- Ensure attribution is visible and accessible\n\n### Verbatim Reproduction Limits\n- NEVER reproduce more than 30 consecutive words from any single source\n- Track word count per source to ensure compliance\n- Always paraphrase and summarize rather than quote directly\n- Add compliance note when the content from the source is rephrased: \"Content was rephrased for compliance with licensing restrictions\"\n\n### Content Modification Guidelines\n- You MAY paraphrase, summarize, and reformat content\n- You MUST NOT materially change the underlying substance or meaning\n- Preserve factual accuracy while condensing information\n- Avoid altering core arguments, data, or conclusions\n\n## Usage Details\n- You may rephrase user queries to improve search effectiveness\n- You can make multiple queries to gather comprehensive information\n- Consider breaking complex questions into focused searches\n- Refine queries based on initial results if needed\n\n## Output Usage\n- Prioritize latest published sources based on publishedDate\n- Prefer official documentation to blogs and news posts\n- Use domain information to assess source authority and reliability\n\n## Error Handling\n- If unable to comply with content restrictions, explain limitations to user\n- Suggest alternative approaches when content cannot be reproduced\n- Prioritize compliance over completeness when conflicts arise\n\n## Output\nThe tool returns a JSON object with a \"results\" array containing search results:\n\n{\n  \"results\": [\n    {\n      \"title\": \"Example Page Title\",\n      \"url\": \"https://example.com/page\",\n      \"snippet\": \"Brief excerpt from the page...\",\n      \"publishedDate\": \"2025-11-20T10:30:00Z\",\n      \"domain\": \"example.com\",\n      \"id\": \"unique-id-123\",\n      \"maxVerbatimWordLimit\": 30,\n      \"publicDomain\": false\n    }\n  ]\n}\n\n## UI FROM LLM (You) back to the user\nCRITICAL: Always start your response with \"Here's what I found:\" and then start from a newline.\nALWAYS end your response with a blank line followed by 'References:' and list the sources you used in sequential order [1], [2], [3], etc. with NO gaps in numbering. Format: '[N] Title - URL' one per line. Truncate long titles to 80 characters and long URLs to 100 characters, adding '...' if truncated.",
+          "input_schema": {
+            "json": {
+              "properties": {
+                "query": {
+                  "type": "string",
+                  "description": "Search query - can be keywords, questions, or specific topics"
+                }
+              },
+              "type": "object",
+              "required": [
+                "query"
+              ]
+            }
+          }
+        }
+      },
+      {
+        "ToolSpecification": {
+          "name": "use_subagent",
+          "description": "⚠️ CRITICAL DELEGATION TOOL ⚠️\n\n🔍 BEFORE attempting ANY task, CHECK if you have the required tools in YOUR current tool list.\n\n❌ If you DON'T have the necessary tools → YOU MUST use this tool to delegate to a subagent that does.\n✅ If you DO have the tools → Handle the task yourself.\n\n## When to Use (MANDATORY scenarios):\n\n1. **MISSING TOOLS**: The user asks you to do something but you don't see the required tool in your available tools list\n   - Example: User asks to read a file, but you don't have 'fs_read' → USE THIS TOOL\n   - Example: User asks to search code, but you don't have 'code' tool → USE THIS TOOL\n   - Example: User asks to run bash command, but you don't have 'execute_bash' → USE THIS TOOL\n\n2. **PARALLEL PROCESSING**: A complex task can be split into independent subtasks that different specialized agents can handle simultaneously\n\n3. **CAPABILITY CHECK**: Use ListAgents command first to see what specialized agents and their toolsets are available\n\n## How Subagents Are Different:\n- Subagents have DIFFERENT, SPECIALIZED toolsets than you\n- Each subagent may have tools you don't have access to\n- They operate independently with their own context\n- Up to 4 subagents can work in parallel\n\n## Decision Flow:\n```\nUser makes request → Check YOUR tools list → Missing required tool? → USE use_subagent\n                                          → Have required tool? → Handle it yourself\n```\n\n⚡ Remember: Don't apologize about lacking tools - just delegate to a subagent that has them! Also note that subagents that are spawned together could not communicate with each other. If they are to perform tasks that are dependent on each other. Spawn them with a different tool call!",
+          "input_schema": {
+            "json": {
+              "required": [
+                "command"
+              ],
+              "type": "object",
+              "properties": {
+                "command": {
+                  "enum": [
+                    "ListAgents",
+                    "InvokeSubagents"
+                  ],
+                  "type": "string",
+                  "description": "The commands to run. Allowed options are `ListAgents` to query available agents, or `InvokeSubagents` to invoke one or more subagents"
+                },
+                "content": {
+                  "properties": {
+                    "subagents": {
+                      "items": {
+                        "properties": {
+                          "query": {
+                            "description": "The query or task to be handled by the subagent",
+                            "type": "string"
+                          },
+                          "relevant_context": {
+                            "description": "Optional additional context that should be provided to the subagent to help it understand the task better",
+                            "type": "string"
+                          },
+                          "agent_name": {
+                            "description": "Optional name of the specific agent to use. If not provided, uses the default agent",
+                            "type": "string"
+                          }
+                        },
+                        "type": "object",
+                        "required": [
+                          "query"
+                        ]
+                      },
+                      "type": "array",
+                      "description": "Array of subagent invocations to execute in parallel. Each invocation specifies a query, optional agent name, and optional context."
+                    }
+                  },
+                  "required": [
+                    "subagents"
+                  ],
+                  "description": "Required for `InvokeSubagents` command. Contains subagents array and optional conversation ID.",
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      },
+      {
+        "ToolSpecification": {
+          "name": "grep",
+          "description": "Fast text pattern search in files using regex. ALWAYS use this tool instead of 'grep', 'rg', or 'ag' commands in bash. Respects .gitignore.\n\n## Text Discovery Only\nUse grep for literal text/pattern matching: error messages, TODOs, config values, regex patterns.\n\n## For Semantic Code Understanding → Use 'code' tool if available\n- Finding symbol definitions or usages → code tool (search_symbols, goto_definition, find_references)\n- Understanding code structure/relationships → code tool\n- Distinguishing definition vs call vs import → code tool\n\n## Fallback\nIf the 'code' tool is available but returns insufficient symbol info, use grep to discover candidate files/lines, then return to 'code' for precise navigation.\n\nWhen you use this tool, prefer to show the user a small list of representative matches (including file paths and line numbers) instead of only giving a high-level summary.",
+          "input_schema": {
+            "json": {
+              "required": [
+                "pattern"
+              ],
+              "properties": {
+                "pattern": {
+                  "type": "string",
+                  "description": "Regex pattern to search for. Examples: \"fn main\", \"class.*Component\", \"TODO|FIXME\". Start with simple patterns first (e.g. just the word you're looking for), then refine if needed."
+                },
+                "include": {
+                  "description": "File filter glob. Examples: \"*.rs\", \"*.{ts,tsx}\", \"*.py\"",
+                  "type": "string"
+                },
+                "case_sensitive": {
+                  "description": "Case-sensitive search. Defaults to false (case-insensitive).",
+                  "type": "boolean"
+                },
+                "max_matches_per_file": {
+                  "type": "integer",
+                  "description": "Max matches returned per file (output limit). Increase to see all occurrences in a file."
+                },
+                "max_files": {
+                  "type": "integer",
+                  "description": "Max number of files returned (output limit). Increase for comprehensive codebase searches."
+                },
+                "path": {
+                  "type": "string",
+                  "description": "Directory to search from. Defaults to current working directory."
+                },
+                "max_total_lines": {
+                  "type": "integer",
+                  "description": "Max total matched lines returned across all files (output limit). Increase when searching for many occurrences."
+                },
+                "output_mode": {
+                  "type": "string",
+                  "enum": [
+                    "content",
+                    "files_with_matches",
+                    "count"
+                  ],
+                  "description": "Output format: 'content' returns matches as 'file:line:content' (default, best for seeing actual matches), 'files_with_matches' returns only file paths, 'count' returns match counts per file."
+                },
+                "max_depth": {
+                  "description": "Max directory depth to traverse when searching (search limit). Increase for deeply nested structures.",
+                  "type": "integer"
+                }
+              },
+              "type": "object"
+            }
+          }
+        }
+      },
+      {
+        "ToolSpecification": {
+          "name": "fs_write",
+          "description": "A tool for creating and editing files\n * The `create` command will override the file at `path` if it already exists as a file, and otherwise create a new file\n * The `append` command will add content to the end of an existing file, automatically adding a newline if the file doesn't end with one. The file must exist.\n Notes for using the `str_replace` command:\n * The `old_str` parameter should match EXACTLY one or more consecutive lines from the original file. Be mindful of whitespaces!\n * If the `old_str` parameter is not unique in the file, the replacement will not be performed. Make sure to include enough context in `old_str` to make it unique\n * The `new_str` parameter should contain the edited lines that should replace the `old_str`.",
+          "input_schema": {
+            "json": {
+              "properties": {
+                "new_str": {
+                  "type": "string",
+                  "description": "Required parameter of `str_replace` command containing the new string. Required parameter of `insert` command containing the string to insert. Required parameter of `append` command containing the content to append to the file."
+                },
+                "summary": {
+                  "type": "string",
+                  "description": "A brief explanation of what the file change does or why it's being made."
+                },
+                "insert_line": {
+                  "description": "Required parameter of `insert` command. The `new_str` will be inserted AFTER the line `insert_line` of `path`.",
+                  "type": "integer"
+                },
+                "old_str": {
+                  "description": "Required parameter of `str_replace` command containing the string in `path` to replace.",
+                  "type": "string"
+                },
+                "file_text": {
+                  "type": "string",
+                  "description": "Required parameter of `create` command, with the content of the file to be created."
+                },
+                "command": {
+                  "enum": [
+                    "create",
+                    "str_replace",
+                    "insert",
+                    "append"
+                  ],
+                  "type": "string",
+                  "description": "The commands to run. Allowed options are: `create`, `str_replace`, `insert`, `append`."
+                },
+                "path": {
+                  "description": "Absolute path to file or directory, e.g. `/repo/file.py` or `/repo`.",
+                  "type": "string"
+                }
+              },
+              "type": "object",
+              "required": [
+                "command",
+                "path"
+              ]
+            }
+          }
+        }
+      },
+      {
+        "ToolSpecification": {
+          "name": "report_issue",
+          "description": "Opens the browser to a pre-filled gh (GitHub) issue template to report chat issues, bugs, or feature requests. Pre-filled information includes the conversation transcript, chat context, and chat request IDs from the service.",
+          "input_schema": {
+            "json": {
+              "properties": {
+                "expected_behavior": {
+                  "description": "Optional: The expected chat behavior or action that did not happen.",
+                  "type": "string"
+                },
+                "steps_to_reproduce": {
+                  "type": "string",
+                  "description": "Optional: Previous user chat requests or steps that were taken that may have resulted in the issue or error response."
+                },
+                "title": {
+                  "description": "The title of the GitHub issue.",
+                  "type": "string"
+                },
+                "actual_behavior": {
+                  "type": "string",
+                  "description": "Optional: The actual chat behavior that happened and demonstrates the issue or lack of a feature."
+                }
+              },
+              "required": [
+                "title"
+              ],
+              "type": "object"
+            }
+          }
+        }
+      },
+      {
+        "ToolSpecification": {
+          "name": "code",
+          "description": "Code intelligence to analyze code with AST parsing and fuzzy search. Language auto-detected from file extension.\n\nIMPORTANT: Prefer this tool over fs_read for code files. This tool intelligently provides structured code analysis.\n\nCORE FEATURES:\n• Fuzzy search for symbols (classes, functions, methods)\n• Extracts function/class signatures via AST\n• Structural AST search and rewrite (ast-grep)\n• Codebase overview and directory exploration\n\nNOTE: Use fs_read with line ranges for unsupported patterns.\n\n## Operations\n\n**search_symbols** - Find symbol definitions by name across workspace.\nParams: symbol_name (required), path, symbol_type, limit, language, exact_match\nUses fuzzy matching by default. Set exact_match=true for precise matching.\n\n**lookup_symbols** - Batch lookup specific symbols (max 10).\nParams: symbols (required), file_path, include_source\nSet include_source=false for large classes/structs to avoid context overflow.\nScoped lookup: Provide file_path to search within specific file only.\n\n**get_document_symbols** - List all symbols in a file.\nParams: file_path (required), top_level_only (recommended: true)\nUse this for understanding file structure without reading content.\nPrefer this over fs_read when you need symbol information.\n\n**pattern_search** - AST-based structural search using ast-grep.\nParams: pattern, language (required), file_path, limit\n\n**pattern_rewrite** - AST-based code transformation.\nParams: pattern, replacement, language (required), file_path, limit, dry_run\nUse dry_run=true first to preview changes.\n\n## Pattern Search & Rewrite\n\nMetavariables:\n• $VAR - Matches single node (identifier, expression)\n• $$$ - Matches zero or more nodes (statements, parameters)\n\nSimple patterns:\n• console.log($ARG) - Match any console.log call\n• function $NAME($$$PARAMS) {} - Match function declaration\n• $OBJ.$METHOD() - Match any method call\n\nStructural rules (YAML):\n• pattern - Match code structure\n• kind - Match AST node type (function_declaration, class_declaration)\n• has - Node contains descendant matching pattern\n• inside - Node is inside ancestor matching pattern\n• all/any/not - Logical operators\n\nCritical: For relational rules (has, inside), always use stopBy: end\n\nRewrite examples:\n• pattern='var $N = $V', replacement='const $N = $V'\n• pattern='$O.hasOwnProperty($P)', replacement='Object.hasOwn($O, $P)'\n\nWorkflow:\n1. Use pattern_search first to verify matches\n2. Review matches to ensure correctness\n3. Test rewrite on small subset\n4. Apply to full codebase after verification\n\n**generate_codebase_overview** - ONLY for explicit architecture questions. Not for bug fixes or finding code.\nParams: path (optional)\n\n**search_codebase_map** - Focused directory exploration.\nParams: file_path, path\n\n## Explore Unfamiliar Code\n1. search_symbols for domain-specific types/functions/methods/classes\n2. lookup_symbols with include_source=true on promising matches\n3. grep (max 2 searches) for literal text patterns\n4. Repeat 1-3 with refined terms if needed\n5. generate_codebase_overview ONLY for architecture review or full codebase understanding\n   - NOT for bug fixes, feature work, or finding specific code\n\n## Tool Selection Priority\n1. search_symbols or lookup_symbols for finding code - ALWAYS use for functions/methods/classes/structs/interfaces\n2. get_document_symbols for file structure\n3. grep - ONLY for literal text in comments/strings, config values, code\n4. fs_read - raw file content when needed\n\n## CRITICAL RULES\n- Start with search_symbols\n- Always follow search_symbols with lookup_symbols\n- When searching for multiple related symbols, call search_symbols in parallel\n\n## Quick Reference\n• \"What's in this file?\" → get_document_symbols\n• \"Show me X class\" → search_symbols, then lookup_symbol\n\n## LSP Operations (Not Available)\nThese require LSP initialization (/code init):\nfind_references, goto_definition, get_hover, get_completions, get_diagnostics, rename_symbol",
+          "input_schema": {
+            "json": {
+              "required": [
+                "operation"
+              ],
+              "type": "object",
+              "properties": {
+                "symbols": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  },
+                  "description": "List of simple symbol names, not qualified (e.g. ['myFunction'] not ['MyClass.myFunction']). Required for lookup_symbols, max 10"
+                },
+                "pattern": {
+                  "type": "string",
+                  "description": "AST pattern (required for pattern_search)"
+                },
+                "file_path": {
+                  "description": "File path (required for get_document_symbols, optional for pattern_search/search_codebase_map)",
+                  "type": "string"
+                },
+                "limit": {
+                  "type": "integer",
+                  "description": "Maximum results (optional for search_symbols/pattern_search)"
+                },
+                "symbol_name": {
+                  "type": "string",
+                  "description": "Simple symbol name, not qualified (e.g. 'myFunction' not 'MyClass.myFunction'). Required for search_symbols"
+                },
+                "operation": {
+                  "description": "The code intelligence operation to perform",
+                  "enum": [
+                    "search_symbols",
+                    "lookup_symbols",
+                    "get_document_symbols",
+                    "pattern_search",
+                    "generate_codebase_overview",
+                    "search_codebase_map",
+                    "pattern_rewrite"
+                  ],
+                  "type": "string"
+                },
+                "language": {
+                  "type": "string",
+                  "description": "Programming language (required for pattern_search, optional for search_symbols)"
+                },
+                "include_source": {
+                  "type": "boolean",
+                  "description": "Include source code in results (optional for lookup_symbols)"
+                },
+                "path": {
+                  "type": "string",
+                  "description": "Directory path (optional, for generate_codebase_overview: workspace root, for search_codebase_map: path filter, for search_symbols: scope search to file or directory)"
+                }
+              }
+            }
+          }
+        }
+      }
+    ],
+    "awslabs.cdk-mcp-server": [
+      {
+        "ToolSpecification": {
+          "name": "LambdaLayerDocumentationProvider",
+          "description": "Provide documentation sources for Lambda layers.\n\nThis tool returns information about where to find documentation for Lambda layers\nand instructs the MCP Client to fetch and process this documentation.\n\nArgs:\n    ctx: MCP context\n    layer_type: Type of layer (\"generic\" or \"python\")\n\nReturns:\n    Dictionary with documentation source information\n",
+          "input_schema": {
+            "json": {
+              "title": "lambda_layer_documentation_providerArguments",
+              "type": "object",
+              "required": [
+                "layer_type"
+              ],
+              "properties": {
+                "layer_type": {
+                  "title": "Layer Type",
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      },
+      {
+        "ToolSpecification": {
+          "name": "ExplainCDKNagRule",
+          "description": "Explain a specific CDK Nag rule with AWS Well-Architected guidance.\n\nCDK Nag is a crucial tool for ensuring your CDK applications follow AWS security best practices.\n\nBasic implementation:\n```typescript\nimport { App } from 'aws-cdk-lib';\nimport { AwsSolutionsChecks } from 'cdk-nag';\n\nconst app = new App();\n// Create your stack\nconst stack = new MyStack(app, 'MyStack');\n// Apply CDK Nag\nAwsSolutionsChecks.check(app);\n```\n\nOptional integration patterns:\n\n1. Using environment variables:\n```typescript\nif (process.env.ENABLE_CDK_NAG === 'true') {\n  AwsSolutionsChecks.check(app);\n}\n```\n\n2. Using CDK context parameters:\n```typescript\n3. Environment-specific application:\n```typescript\nconst environment = app.node.tryGetContext('environment') || 'development';\nif (['production', 'staging'].includes(environment)) {\n  AwsSolutionsChecks.check(stack);\n}\n```\n\nFor more information on specific rule packs:\n- Use resource `cdk-nag://rules/{rule_pack}` to get all rules for a specific pack\n- Use resource `cdk-nag://warnings/{rule_pack}` to get warnings for a specific pack\n- Use resource `cdk-nag://errors/{rule_pack}` to get errors for a specific pack\n\nArgs:\n    ctx: MCP context\n    rule_id: The CDK Nag rule ID (e.g., 'AwsSolutions-IAM4')\n\nReturns:\n    Dictionary with detailed explanation and remediation steps\n",
+          "input_schema": {
+            "json": {
+              "type": "object",
+              "properties": {
+                "rule_id": {
+                  "type": "string",
+                  "title": "Rule Id"
+                }
+              },
+              "title": "explain_cdk_nag_ruleArguments",
+              "required": [
+                "rule_id"
+              ]
+            }
+          }
+        }
+      },
+      {
+        "ToolSpecification": {
+          "name": "CDKGeneralGuidance",
+          "description": "Use this tool to get prescriptive CDK advice for building applications on AWS.\n\nArgs:\n    ctx: MCP context\n",
+          "input_schema": {
+            "json": {
+              "title": "cdk_guidanceArguments",
+              "properties": {},
+              "type": "object"
+            }
+          }
+        }
+      },
+      {
+        "ToolSpecification": {
+          "name": "GetAwsSolutionsConstructPattern",
+          "description": "Search and discover AWS Solutions Constructs patterns.\n\nAWS Solutions Constructs are vetted architecture patterns that combine multiple\nAWS services to solve common use cases following AWS Well-Architected best practices.\n\nKey benefits:\n- Accelerated Development: Implement common patterns without boilerplate code\n- Best Practices Built-in: Security, reliability, and performance best practices\n- Reduced Complexity: Simplified interfaces for multi-service architectures\n- Well-Architected: Patterns follow AWS Well-Architected Framework principles\n\nWhen to use Solutions Constructs:\n- Implementing common architecture patterns (e.g., API + Lambda + DynamoDB)\n- You want secure defaults and best practices applied automatically\n- You need to quickly prototype or build production-ready infrastructure\n\nThis tool provides metadata about patterns. For complete documentation,\nuse the resource URI returned in the 'documentation_uri' field.\n\nArgs:\n    ctx: MCP context\n    pattern_name: Optional name of the specific pattern (e.g., 'aws-lambda-dynamodb')\n    services: Optional list of AWS services to search for patterns that use them\n             (e.g., ['lambda', 'dynamodb'])\n\nReturns:\n    Dictionary with pattern metadata including description, services, and documentation URI\n",
+          "input_schema": {
+            "json": {
+              "type": "object",
+              "properties": {
+                "pattern_name": {
+                  "title": "Pattern Name",
+                  "default": null,
+                  "anyOf": [
+                    {
+                      "type": "string"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                },
+                "services": {
+                  "anyOf": [
+                    {
+                      "items": {
+                        "type": "string"
+                      },
+                      "type": "array"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ],
+                  "title": "Services",
+                  "default": null
+                }
+              },
+              "title": "get_aws_solutions_construct_patternArguments"
+            }
+          }
+        }
+      },
+      {
+        "ToolSpecification": {
+          "name": "SearchGenAICDKConstructs",
+          "description": "Search for GenAI CDK constructs by name or type.\n\nThe search is flexible and will match any of your search terms (OR logic).\nIt handles common variations like singular/plural forms and terms with/without spaces.\nContent is fetched dynamically from GitHub to ensure the most up-to-date documentation.\n\nExamples:\n- \"bedrock agent\" - Returns all agent-related constructs\n- \"knowledgebase vector\" - Returns knowledge base constructs related to vector stores\n- \"agent actiongroups\" - Returns action groups for agents\n- \"opensearch vector\" - Returns OpenSearch vector constructs\n\nThe search supports subdirectory content (like knowledge bases and their sections)\nand will find matches across all available content.\n\nArgs:\n    ctx: MCP context\n    query: Search term(s) to find constructs by name or description\n    construct_type: Optional filter by construct type ('bedrock', 'opensearchserverless', etc.)\n\nReturns:\n    Dictionary with matching constructs and resource URIs\n",
+          "input_schema": {
+            "json": {
+              "title": "search_genai_cdk_constructsArguments",
+              "properties": {
+                "construct_type": {
+                  "anyOf": [
+                    {
+                      "type": "string"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ],
+                  "default": null,
+                  "title": "Construct Type"
+                },
+                "query": {
+                  "anyOf": [
+                    {
+                      "type": "string"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ],
+                  "title": "Query",
+                  "default": null
+                }
+              },
+              "type": "object"
+            }
+          }
+        }
+      },
+      {
+        "ToolSpecification": {
+          "name": "GenerateBedrockAgentSchema",
+          "description": "DEPRECATED: This tool is deprecated. Please use the AWS IaC MCP Server instead.\n\nGenerate OpenAPI schema for Bedrock Agent Action Groups from a file.\n\nThis tool converts a Lambda file with BedrockAgentResolver into a Bedrock-compatible\nOpenAPI schema. It uses a progressive approach to handle common issues:\n1. Direct import of the Lambda file\n2. Simplified version with problematic imports commented out\n3. Fallback script generation if needed\n\nArgs:\n    ctx: MCP context\n    lambda_code_path: Path to Python file containing BedrockAgentResolver app\n    output_path: Where to save the generated schema\n\nReturns:\n    Dictionary with schema generation results, including status, path to generated schema,\n    and diagnostic information if errors occurred\n",
+          "input_schema": {
+            "json": {
+              "properties": {
+                "lambda_code_path": {
+                  "title": "Lambda Code Path",
+                  "type": "string"
+                },
+                "output_path": {
+                  "type": "string",
+                  "title": "Output Path"
+                }
+              },
+              "required": [
+                "lambda_code_path",
+                "output_path"
+              ],
+              "title": "bedrock_schema_generator_from_fileArguments",
+              "type": "object"
+            }
+          }
+        }
+      },
+      {
+        "ToolSpecification": {
+          "name": "CheckCDKNagSuppressions",
+          "description": "DEPRECATED: This tool is deprecated. Please use the AWS IaC MCP Server instead.\n\nCheck if CDK code contains Nag suppressions that require human review.\n\nScans TypeScript/JavaScript code for NagSuppressions usage to ensure security\nsuppressions receive proper human oversight and justification.\n\nArgs:\n    ctx: MCP context\n    code: CDK code to analyze (TypeScript/JavaScript)\n    file_path: Path to a file containing CDK code to analyze\n\nReturns:\n    Analysis results with suppression details and security guidance\n",
+          "input_schema": {
+            "json": {
+              "properties": {
+                "code": {
+                  "anyOf": [
+                    {
+                      "type": "string"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ],
+                  "default": null,
+                  "title": "Code"
+                },
+                "file_path": {
+                  "anyOf": [
+                    {
+                      "type": "string"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ],
+                  "default": null,
+                  "title": "File Path"
+                }
+              },
+              "title": "check_cdk_nag_suppressions_toolArguments",
+              "type": "object"
+            }
+          }
+        }
+      }
+    ]
+  },
+  "context_manager": {
+    "max_context_files_size": 750000,
+    "current_profile": "kiro_default",
+    "paths": [
+      "AmazonQ.md",
+      "AGENTS.md",
+      "README.md",
+      ".kiro/skills/*/SKILL.md",
+      "~/.kiro/skills/*/SKILL.md"
+    ],
+    "hooks": {}
+  },
+  "context_message_length": 1746,
+  "latest_summary": null,
+  "model_info": {
+    "model_name": "auto",
+    "description": "Models chosen by task for optimal usage and consistent quality",
+    "model_id": "auto",
+    "context_window_tokens": 1000000,
+    "rate_multiplier": 1.0,
+    "rate_unit": "Credit"
+  },
+  "file_line_tracker": {},
+  "checkpoint_manager": null,
+  "mcp_enabled": true,
+  "mcp_last_checked": [
+    2026,
+    107,
+    13,
+    0,
+    6,
+    69181252,
+    0,
+    0,
+    0
+  ],
+  "mcp_server_versions": {},
+  "mcp_disabled_due_to_api_failure": false,
+  "user_turn_metadata": {
+    "continuation_id": "1050fab9-edca-46f3-ba94-96ad5032bbb5",
+    "requests": [],
+    "usage_info": []
+  }
+}
