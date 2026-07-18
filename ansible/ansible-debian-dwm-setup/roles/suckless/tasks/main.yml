@@ -3,8 +3,8 @@
     repo: "{{ suckless.url }}"
     dest: "{{ home_dir }}/suckless"
     version: "{{ suckless.version }}"
-    update: no
-    force: no
+    update: yes
+    force: yes
     accept_hostkey: yes
 
 - name: Build and install suckless tools
