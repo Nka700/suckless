@@ -18,7 +18,7 @@ home_dir: "/home/{{ username }}"
 
 dotfiles:
   url: https://github.com/Nka700/.dotfiles.git
-  version: archdwmt490
+  version: debian_on_aws_jpkb
   destination: ~/.dotfiles
   packages:
     - conky
@@ -43,7 +43,7 @@ pull_suckless: True
 
 suckless:
   url: https://github.com/Nka700/suckless.git
-  version: archt490
+  version: archg83hsdwm
 
 ## tlp vars
 configure_tlp: True
