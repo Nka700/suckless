@@ -10,7 +10,7 @@
 - name: Build and install suckless tools
   command: make clean install
   args:
-    chdir: "{{ home_dir }}/suckless/suckless{{ item }}"
+    chdir: "{{ home_dir }}/suckless/suckless/{{ item }}"
   loop:
     - dwm
     - dmenu
