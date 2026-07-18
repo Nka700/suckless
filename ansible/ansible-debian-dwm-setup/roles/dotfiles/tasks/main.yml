@@ -1,0 +1,46 @@
+---
+- name: Create user config directories
+  file:
+    path: "{{ home_dir }}/.config/{{ item }}"
+    state: directory
+    mode: "0755"
+    owner: "{{ username }}"
+    group: "{{ username }}"
+  loop:
+    - conky
+    - copyq
+    - fcitx
+    - fcitx5
+    - kitty
+  become: yes
+  become_user: "{{ username }}"
+
+- name: Create user scripts directories
+  file:
+    path: "{{ home_dir }}/.local/bin"
+    state: directory
+    mode: "0755"
+    owner: "{{ username }}"
+    group: "{{ username }}"
+  become: yes
+  become_user: "{{ username }}"
+
+- name: Clone dotfiles
+  git:
+    repo: "{{ dotfiles.url }}"
+    dest: "{{ home_dir }}/.dotfiles"
+    version: "{{ dotfiles.version }}"
+    update: no
+    force: no
+    accept_hostkey: yes
+  become: yes
+  become_user: "{{ username }}"
+
+- name: Stow dotfiles packages
+  command: "stow --restow {{ item }}"
+  args:
+    chdir: "{{ dotfiles.destination }}"
+  loop: "{{ dotfiles.packages }}"
+  become: yes
+  become_user: "{{ username }}"
+  changed_when: false
