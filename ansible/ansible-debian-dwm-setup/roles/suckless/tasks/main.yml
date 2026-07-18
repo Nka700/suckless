@@ -1,7 +1,7 @@
 - name: Clone suckless repository
   git:
     repo: "{{ suckless.url }}"
-    dest: "{{ home_dir }}"/suckless
+    dest: "{{ home_dir }}/suckless"
     version: "{{ suckless.version }}"
     update: no
     force: no
