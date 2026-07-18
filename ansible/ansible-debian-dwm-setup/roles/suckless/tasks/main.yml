@@ -10,12 +10,13 @@
 - name: Build and install suckless tools
   command: make clean install
   args:
-    chdir: "{{ home_dir }}/suckless/{{ item }}"
+    chdir: "{{ home_dir }}/suckless/suckless{{ item }}"
   loop:
     - dwm
-    - slstatus
     - dmenu
     - st
+    - slstatus
+    - tabbed
   changed_when: false
 
 - name: Deploy dwm.desktop using template
