@@ -1,4 +1,6 @@
 # Ignore binary files
 *.o
-*dwm
-*slstatus
+*/slstatus/slstatus
+*/dwm/dwm
+*/dmenu/dmenu
+*/tabbed/tabbed
